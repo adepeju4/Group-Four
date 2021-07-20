@@ -6,6 +6,8 @@ IMPORTANT...
 
 - Always work from develop branch.
 
+- You can access the pages assigned to you by adding the /pagename (e.g /signup) behind the localhost:port of your    app. However, the landing page can only be accessed by localhost:port/ (meaning it is the first page you'll come across when your development view is complete.).
+
 - The components folder is for reuseable components such as the topbar which we will use in almost every page, the search handler and so on.
 
 - All main pages should be at the root of the SRC folder ^_^
