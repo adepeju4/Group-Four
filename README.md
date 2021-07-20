@@ -1,5 +1,9 @@
 IMPORTANT...
 
+- Run npm install to download all packages and dependencies.
+
+- Ensure your node_modules folder is included/not removed from the .gitignore.
+
 - Always work from develop branch.
 
 - Always pull before you push to avoid, merge conflicts. The repository can be updated at anytime.
