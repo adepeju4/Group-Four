@@ -12,7 +12,7 @@ IMPORTANT...
 
 - All main pages should be at the root of the SRC folder ^_^
 
-- Always pull before you push to avoid, merge conflicts. The repository can be updated at anytime.
+- Always pull before you push to avoid merge conflicts. The repository can be updated at anytime.
 
 - Dependencies such as eslint and prettier has been installed into the application to guide your writing process.
 
@@ -21,9 +21,9 @@ IMPORTANT...
 
 BONUS
 
-- Type "npm run format" to format your css codes.
+- Type "npm run format" to format your js/jsx codes.
 
-- Type "npm run lint" to format your jsx codes.
+- Type "npm run lint" to detect possible errors in your js/jsx codes.
 
 
 
