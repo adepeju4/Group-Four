@@ -12,13 +12,16 @@ IMPORTANT...
 
 - ALWAYS PUSH TO DEVELOP AND NOT MASTER.
 
+
 BONUS
 
 - Type "npm run format" to format your css codes.
 
--Type "npm run lint" to format your jsx codes.
+- Type "npm run lint" to format your jsx codes.
 
-- Updates on notices will be updated here from time to time and on the whatsapp group.
+
+
+- Updates on notices will be shared here from time to time and on the whatsapp group.
 
 Goodluck!
 
