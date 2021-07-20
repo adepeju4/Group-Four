@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
+      <BrowserRouter>
         {/* insert navbar here */}
 
         <div className="content">
@@ -33,11 +33,10 @@ function App() {
             <Route path="/checkout">
               <Checkout />
             </Route>
-            
           </Switch>
         </div>
-    </BrowserRouter>
-      </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
