@@ -6,6 +6,10 @@ IMPORTANT...
 
 - Always work from develop branch.
 
+- The components folder is for reuseable components such as the topbar which we will use in almost every page, the search handler and so on.
+
+- All main pages should be at the root of the SRC folder ^_^
+
 - Always pull before you push to avoid, merge conflicts. The repository can be updated at anytime.
 
 - Dependencies such as eslint and prettier has been installed into the application to guide your writing process.
