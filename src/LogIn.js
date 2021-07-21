@@ -4,5 +4,4 @@ const LogIn = () => {
 
 export default LogIn;
 
-
-//Don't forget to wrap the code inside the return statement in parentheses. 
+//Don't forget to wrap the code inside the return statement in parentheses.
