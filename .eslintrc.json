@@ -1,34 +1,18 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
-  ],
-  "rules": {
-    "react/prop-types": 0,
-    "jsx-a11y/label-has-for": 0,
-    "no-console": 1,
-    "react/react-in-jsx-scope": "off"
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  "plugins": ["react", "import", "jsx-a11y"],
-  "parser": "react-scripts/node_modules/babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
   },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  },
-  "settings": {
-    "react": {
-      "version": "16.5.2"
-    }
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
   }
 }
