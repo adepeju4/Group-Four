@@ -1,5 +1,11 @@
+import Circle from "./Components/Eclipse";
+
 const Checkout = () => {
-  return <>^_^ this is the checkout page. happy development.</>;
+  return (
+    <>
+      <Circle />
+    </>
+  );
 };
 
 export default Checkout;

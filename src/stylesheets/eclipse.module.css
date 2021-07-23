@@ -1,0 +1,38 @@
+.circle {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .circle {
+    display: block;
+    width: 200px;
+    height: 147px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 576px) {
+  .circle {
+    display: block;
+    width: 350px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 767px) {
+  .circle {
+    display: block;
+    /* width: 450px;
+    height: 350px; */
+    width: 580px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .circle {
+    display: block;
+    width: 600px;
+    height: 500px;
+  }
+}
