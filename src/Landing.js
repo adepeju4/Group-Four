@@ -1,10 +1,16 @@
 import styles from "./stylesheets/landing.module.css";
-import { Link } from "react-router-dom";
 import { LightVariantCart } from "./Components/Cart";
 import Circle from "./Components/Eclipse";
+import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
+// import { animateScroll as scroll } from "react-scroll";
 import { LeftPlate, RightPlate } from "./Components/Plates";
+import Footer from "./Components/Footer";
 
 const Landing = () => {
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
   return (
     <div className={styles.landing}>
       <div className={styles.heroSection}>
@@ -58,6 +64,7 @@ const Landing = () => {
               <input
                 type="text"
                 name="address"
+                className={styles.input}
                 id="address"
                 placeholder="Write in your address"
               />
@@ -75,7 +82,14 @@ const Landing = () => {
         <RightPlate className={styles.right} />
 
         <div className={styles.next}>
-          <Link href="#main">
+          <Link
+          // to="#main"
+          // activeClass="active"
+          // spy={true}
+          // smooth={true}
+          // offset={-70}
+          // duration={500}
+          >
             <svg
               width="35"
               height="35"
@@ -95,6 +109,8 @@ const Landing = () => {
           </Link>
         </div>
       </div>
+      <div id="main" className={styles.main}></div>
+      <Footer />
     </div>
   );
 };

@@ -65,7 +65,9 @@ a {
   border-radius: 20px;
   padding: 10px 20px;
 }
-
+.main {
+  height: 500px;
+}
 .logIn {
   background: #ffda7f;
   color: #000;
@@ -78,7 +80,7 @@ a {
   display: none;
 }
 
-input {
+.input {
   border-radius: 50px;
   outline: none;
   border: 1px solid #000;
@@ -88,7 +90,7 @@ input {
   color: #000;
   margin-top: 10px;
 }
-input::placeholder {
+.input::placeholder {
   color: #000;
 }
 
@@ -192,7 +194,7 @@ input::placeholder {
     width: 100%;
   }
 
-  input {
+  .input {
     width: 300px;
   }
 
