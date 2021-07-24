@@ -11,12 +11,6 @@
   grid-auto-rows: minmax(150px, auto);
 }
 
-.footer > div {
-  padding-left: 20px;
-
-  /* padding-right: 20px; */
-}
-
 .footer > div p:first-child {
   font-weight: 700;
 }
@@ -77,6 +71,11 @@
   margin-left: 20px;
 }
 
+.footer > div:nth-child(4) {
+  display: grid;
+  grid-row-gap: 10px;
+}
+
 @media (min-width: 991.98px) {
   .footer > div {
     width: 100% !important;
@@ -115,7 +114,7 @@
   }
 
   .footer > div {
-    padding-left: 20px;
+    /* padding-left: 20px; */
     width: 50%;
     justify-self: center;
     /* padding-right: 20px; */
