@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
-import { DarkVariantCart, LightVariantCart } from "../Components/Cart.js";
+import { DarkVariantCart, LightVariantCart } from "../Components/Icons.js";
 
-describe("Cart component", () => {
+describe("Icons component", () => {
   test("renders light cart as an svg ", () => {
     render(<LightVariantCart />);
     const svgElement = document.querySelector(".light");

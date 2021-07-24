@@ -1,12 +1,5 @@
-import Footer from "./Components/Footer";
-
 const Cart = () => {
-  return (
-    <>
-      ^_^ this is the cart page. happy development.
-      <Footer />
-    </>
-  );
+  return <>^ _ ^ this is the cart page.happy development.</>;
 };
 
 export default Cart;

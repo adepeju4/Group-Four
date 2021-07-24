@@ -1,11 +1,9 @@
-import Circle from "./Components/Eclipse";
-import Footer from "./Components/Footer";
+import { Circle } from "./Components/Icons.js";
 
 const Checkout = () => {
   return (
     <>
       <Circle />
-      <Footer />
     </>
   );
 };

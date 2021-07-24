@@ -1,11 +1,13 @@
 import styles from "./stylesheets/landing.module.css";
-import { LightVariantCart } from "./Components/Cart";
-import Circle from "./Components/Eclipse";
+import {
+  LightVariantCart,
+  Circle,
+  RightPlate,
+  LeftPlate,
+} from "./Components/Icons";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 // import { animateScroll as scroll } from "react-scroll";
-import { LeftPlate, RightPlate } from "./Components/Plates";
-import Footer from "./Components/Footer";
 
 const Landing = () => {
   // const scrollToTop = () => {
@@ -110,7 +112,6 @@ const Landing = () => {
         </div>
       </div>
       <div id="main" className={styles.main}></div>
-      <Footer />
     </div>
   );
 };

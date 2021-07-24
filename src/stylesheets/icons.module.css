@@ -2,6 +2,18 @@
   display: none;
 }
 
+.plateImageLeft {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  transform: rotate(40.62deg);
+}
+
+.plateImageRight {
+  z-index: -1;
+  position: absolute;
+}
+
 @media (min-width: 400px) {
   .circle {
     display: block;
@@ -22,8 +34,7 @@
 @media (min-width: 767px) {
   .circle {
     display: block;
-    /* width: 450px;
-    height: 350px; */
+
     width: 580px;
     height: 350px;
   }

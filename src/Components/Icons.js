@@ -1,3 +1,5 @@
+import styles from "../stylesheets/icons.module.css";
+
 export const LightVariantCart = () => {
   return (
     <svg
@@ -45,6 +47,40 @@ export const DarkVariantCart = () => {
         d="M48.1935 28.125H20.2022L20.8272 30.9375H46.4573C47.9279 30.9375 49.0179 32.1944 48.692 33.5144L48.1652 35.648C49.9499 36.4454 51.1806 38.1294 51.1806 40.0781C51.1806 42.8205 48.7439 45.039 45.7547 44.9995C42.907 44.9618 40.565 42.8346 40.4881 40.2141C40.4461 38.7826 41.0692 37.4852 42.0926 36.5624H22.0741C23.065 37.4559 23.6806 38.7005 23.6806 40.0781C23.6806 42.8742 21.1475 45.1258 18.0784 44.9945C15.3532 44.8781 13.1369 42.8513 12.9937 40.3436C12.8831 38.4071 13.9902 36.7001 15.6721 35.8097L8.96453 5.625H2.29167C1.026 5.625 0 4.68061 0 3.51562V2.10937C0 0.944385 1.026 0 2.29167 0H12.0818C13.1704 0 14.1087 0.704971 14.3269 1.68662L15.2022 5.625H52.7074C54.178 5.625 55.2679 6.88192 54.9421 8.20186L50.4281 26.4831C50.191 27.4435 49.2635 28.125 48.1935 28.125ZM38.4837 16.875H34.375V11.6016C34.375 11.0191 33.862 10.5469 33.2292 10.5469H30.9375C30.3047 10.5469 29.7917 11.0191 29.7917 11.6016V16.875H25.683C24.6622 16.875 24.1509 18.0111 24.8728 18.6754L31.2731 24.5667C31.7206 24.9785 32.4461 24.9785 32.8936 24.5667L39.294 18.6754C40.0158 18.0111 39.5045 16.875 38.4837 16.875Z"
         fill="black"
       />
+    </svg>
+  );
+};
+
+export const LeftPlate = (props) => {
+  return (
+    <img
+      src="/assets/restaurant.png"
+      // eslint-disable-next-line react/prop-types
+      className={[styles.plateImageLeft, props.className].join(" ")}
+    />
+  );
+};
+
+export const RightPlate = (props) => {
+  return (
+    <img
+      src="/assets/restaurant.png"
+      // eslint-disable-next-line react/prop-types
+      className={[styles.plateImageRight, props.className].join(" ")}
+    />
+  );
+};
+
+export const Circle = (props) => {
+  return (
+    <svg
+      // eslint-disable-next-line react/prop-types
+      className={[styles.circle, props.className].join(" ")}
+      viewBox="0 0 988 727"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="426" cy="165" r="562" fill="#171616" />
     </svg>
   );
 };
