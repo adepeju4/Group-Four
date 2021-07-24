@@ -1,0 +1,14 @@
+.hero {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 30px;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    padding-left: 56px;
+    padding-right: 56px;
+    padding-top: 30px;
+    height: 500px;
+  }
+}

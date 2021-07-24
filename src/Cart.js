@@ -1,5 +1,16 @@
+import Footer from "./Components/Footer";
+import TopBar from "./Components/Navbar/TopBar";
+import styles from "./stylesheets/cart.module.css";
+
 const Cart = () => {
-  return <>^ _ ^ this is the cart page.happy development.</>;
+  return (
+    <>
+      <div className={styles.hero}>
+        <TopBar />^ _ ^ this is the cart page.happy development.
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default Cart;
