@@ -1,171 +1,172 @@
-.container{
-    background-color:#fff;
+.container {
+  background-color: #fff;
 }
-.first{
-    /* position: relative; */
-  
-    display: inline-block;
-    width: 35%;
-    overflow: hidden;
-    margin-bottom: -7px;
+.first {
+  /* position: relative; */
+
+  display: inline-block;
+  width: 35%;
+  overflow: hidden;
+  margin-bottom: -7px;
 }
 
-.image{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
+.image {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 
-.img{
-    width: 100%;
+.img {
+  width: 100%;
 }
 
-.logo{
-    font-size: 29px;
-    font-weight: 600;
-    /* color: #fff; */
+.logo {
+  font-size: 29px;
+  font-weight: 600;
+  /* color: #fff; */
 }
-.image .logo{
-    position: absolute;
-    margin: 0 auto;
-    top: 20%;
-    z-index: 999;
-    text-align: center;
-    width: 100%;
-}
- 
-.logo p{
-    color: #fff;
+.image .logo {
+  position: absolute;
+  margin: 0 auto;
+  top: 20%;
+  z-index: 999;
+  text-align: center;
+  width: 100%;
 }
 
-.second{
-    height: 100vh;
-    /* background-color: darkseagreen; */
-    display: inline-block;
-    width: 65%;
-    overflow: hidden;
-    margin-bottom: -7px;
+.logo p {
+  color: #fff;
 }
 
-.details{
-    margin: 15% auto;
-    /* background-color: chartreuse; */
-    width: 60%;
-    text-align: center;
-    padding: 30px 0;
+.second {
+  height: 100vh;
+  /* background-color: darkseagreen; */
+  display: inline-block;
+  width: 65%;
+  overflow: hidden;
+  margin-bottom: -7px;
 }
 
-.googlebutton{
-    /* background-color: darkgreen; */
-    margin: 20px 0 0 0;
+.details {
+  margin: 15% auto;
+  /* background-color: chartreuse; */
+  width: 60%;
+  text-align: center;
+  padding: 30px 0;
 }
 
-.googlebutton > button{
-    
-    padding: 7px 93px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid black;
+.googlebutton {
+  /* background-color: darkgreen; */
+  margin: 20px 0 0 0;
 }
 
-.googlebutton > button:hover{
-    padding: 7px 93px;
-    background-color: #000;
-    border-radius: 5px;
-    border: 1px solid black;
-    color: #fff;
-    cursor: pointer;
+.googlebutton > button {
+  padding: 7px 93px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
-.btn{
-    font-size: 15px;
-    font-weight: 600;
+.googlebutton > button:hover {
+  padding: 7px 93px;
+  background-color: #000;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: #fff;
+  cursor: pointer;
 }
 
-.form{
-    margin: 0 auto;
-    /* background-color: chocolate; */
-    width: 62%;
-    padding: 20px 0;
+.btn {
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.email{
-    padding: 0 5px;
-    font-size: 10px;
-    font-weight: 600;
-    text-align: left;
-    display: block;
+.form {
+  margin: 0 auto;
+  /* background-color: chocolate; */
+  width: 62%;
+  padding: 20px 0;
 }
 
-.password{
-    padding: 0 5px;
-    font-size: 10px;
-    font-weight: 600;
-    text-align: left;
-    display: block;
-}
-input[type=text]{
-    /* padding: 0 3px; */
-    height: 30px;
-    width: 100%;
-    border-radius: 5px;
-    outline: none;
-    border: 0.5px black solid;
+.email {
+  padding: 0 5px;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  display: block;
 }
 
-input[type=password]{
-    /* padding: 0 3px; */
-    height: 30px;
-    width: 100%;
-    border-radius: 5px;
-    outline: none;
-    border: 0.5px black solid;
+.password {
+  padding: 0 5px;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  display: block;
+}
+.inputEmail {
+  /* padding: 0 3px; */
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 0.5rem;
+  border: 0.5px black solid;
 }
 
-.section1{
-    margin: 20px 0;
-    /* background-color: crimson; */
+.inputPassword {
+  /* padding: 0 3px; */
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  outline: none;
+  border: 0.5px black solid;
 }
 
-.section2{
-    margin: 20px 0;
-    /* background-color: darkgoldenrod; */
+.section1 {
+  margin: 20px 0;
+  /* background-color: crimson; */
 }
 
-.section3{
-    margin: 40px 0;
-    /* background-color: darkslateblue; */
+.section2 {
+  margin: 20px 0;
+  /* background-color: darkgoldenrod; */
 }
 
-.section3 > button{
-    padding: 7px 93px;
-    background-color: #000;
-    border-radius: 5px;
-    border: 1px solid black;
-    color: #fff;
-    width: 100%;
-    cursor: pointer;
-    height: 40px;
+.section3 {
+  margin: 40px 0;
+  /* background-color: darkslateblue; */
+}
+
+.section3 > button {
+  padding: 7px 93px;
+  background-color: #000;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
 }
 
 .btn2 {
-    font-size: 11px;
-    font-weight: 800;
+  font-size: 11px;
+  font-weight: 800;
 }
 
-.restaurant{
-    position: absolute;
-    top: 72%;
-    right: 5%;
-    height: 130px;
-    transform: rotate(-12deg);
+.restaurant {
+  position: absolute;
+  top: 72%;
+  right: 5%;
+  height: 130px;
+  transform: rotate(-12deg);
 }
 
-.restaurant2{
-    position: absolute;
-    top: 5%;
-    right: 50%;
-    height: 130px;
-    transform: rotate(40deg);
+.restaurant2 {
+  position: absolute;
+  top: 5%;
+  right: 50%;
+  height: 130px;
+  transform: rotate(40deg);
 }

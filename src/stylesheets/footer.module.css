@@ -91,9 +91,7 @@
     padding-left: 50px;
     grid-column-gap: 15px;
   }
-  .footer > div {
-    width: 100% !important;
-  }
+
   .footer > div:nth-child(3) {
     justify-self: flex-start;
     grid-column: 3/3;
