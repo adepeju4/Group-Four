@@ -6,6 +6,7 @@ import {
   LeftPlate,
 } from "./Components/Icons";
 import { Link } from "react-router-dom";
+import Footer from "./Components/Footer";
 // eslint-disable-next-line no-unused-vars
 // import { animateScroll as scroll } from "react-scroll";
 
@@ -112,6 +113,7 @@ const Landing = () => {
         </div>
       </div>
       <div id="main" className={styles.main}></div>
+      <Footer />
     </div>
   );
 };

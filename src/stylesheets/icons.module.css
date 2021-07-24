@@ -1,5 +1,6 @@
 .circle {
   display: none;
+  position: absolute;
 }
 
 .plateImageLeft {
@@ -14,9 +15,13 @@
   position: absolute;
 }
 
+.arrowLeft {
+  cursor: pointer;
+}
+
 @media (min-width: 400px) {
   .circle {
-    display: block;
+    /* display: block; */
     width: 200px;
     height: 147px;
     z-index: -1;
