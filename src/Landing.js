@@ -22,7 +22,7 @@ const Landing = () => {
           <div className={styles.logo}>
             <Link to="/">foodine</Link>
           </div>
-          <ul>
+          <ul className={styles.landingNav}>
             <li className={styles.navLinks}>
               <Link to="/cart">
                 <LightVariantCart />
