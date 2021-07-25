@@ -7,7 +7,7 @@
   padding-right: 1.5rem;
   display: grid;
   margin: 0 auto;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(150px, auto);
@@ -26,7 +26,7 @@
 .footer > div:nth-child(3) {
   grid-column: 1/3;
   justify-self: center;
-  align-self: center;
+  /* align-self: c; */
 }
 
 .footer > div:nth-child(5) p:not(:first-child) {
@@ -52,7 +52,7 @@
 .footer > div:nth-child(6) {
   grid-column: 1/3;
   justify-self: center;
-  align-self: center;
+  /* align-self: center; */
 }
 
 .youtube,
@@ -97,7 +97,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(150px, auto);
-    align-items: center;
+    /* align-items: center; */
     padding-left: 50px;
     grid-column-gap: 15px;
     overflow: hidden;
