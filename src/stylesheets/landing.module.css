@@ -27,7 +27,7 @@
   padding-top: 4rem;
 }
 
-ul {
+.landingNav {
   display: none;
   flex-direction: row;
   justify-content: flex-end;
@@ -136,7 +136,7 @@ a {
   }
 }
 @media (min-width: 767px) {
-  ul {
+  .landingNav {
     display: flex;
   }
   .navLinks:not(:first-child) {
@@ -157,9 +157,7 @@ a {
     margin-left: 30px;
     display: block;
   }
-  /* ul {
-    display: flex;
-  } */
+
   .heroSection {
     /* height: 100vh; */
     position: relative;
