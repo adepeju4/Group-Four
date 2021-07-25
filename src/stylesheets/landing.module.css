@@ -14,7 +14,6 @@
 
 .logo {
   font-style: normal;
-  /* font-weight: bold; */
   font-size: 42px;
   line-height: 63px;
   letter-spacing: 0.02em;
@@ -25,7 +24,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 65px;
+  padding-top: 4rem;
 }
 
 ul {
@@ -42,7 +41,7 @@ ul {
 
 li {
   list-style: none;
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 a {
   text-decoration: none;
