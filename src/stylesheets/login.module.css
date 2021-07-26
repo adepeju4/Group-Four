@@ -1,0 +1,80 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 40%;
+  height: 100vh;
+}
+
+.img {
+  width: 100%;
+  height: 100vh;
+}
+
+.form {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../asset/restaurant.png");
+  background-repeat: no-repeat;
+}
+
+.form-control {
+  margin-bottom: 1.8rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-control > input {
+  width: 100%;
+  padding: 1rem 2rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+
+.form-control > label {
+  font-size: 1.6rem;
+}
+
+.form-control button {
+  padding: 1rem 2rem;
+  background-color: #000;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  color: #fff;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.form-control button:hover {
+  background-color: #404040;
+}
+
+@media only screen and (max-width: 550px) {
+  .image-container {
+    display: none;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+}
