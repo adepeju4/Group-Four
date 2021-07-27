@@ -19,6 +19,19 @@
   cursor: pointer;
 }
 
+.darkVariantCart {
+  width: 3rem;
+}
+
+.landingdarkVariantCart {
+  display: flex;
+}
+
+.landingLightIcon {
+  display: none;
+  width: 4rem;
+}
+
 @media (min-width: 400px) {
   .circle {
     /* display: block; */
@@ -42,6 +55,10 @@
 
     width: 580px;
     height: 350px;
+  }
+  .landingLightIcon {
+    display: flex;
+    width: 4rem;
   }
 }
 

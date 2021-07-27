@@ -1,0 +1,269 @@
+{
+  "dishes": [
+    {
+      "id": "1",
+      "label": "Hot",
+      "featured": true,
+      "name": "Egusi",
+      "image": "https://www.willflyforfood.net/wp-content/uploads/2021/06/nigerian-food-egusi-soup.jpg.webp",
+      "category": "most ordered meals",
+      "countInStock": 500,
+      "price": 499,
+      "description": "Hot cassava made meal",
+      "reviews": [
+        {
+          "id": "1",
+          "rating": 5,
+          "comment": "Amazing Amala Dish",
+          "author": "John Lemon",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "2",
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "3",
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "4",
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "5",
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "Hot",
+      "featured": true,
+      "name": "Barbeque Fish",
+      "image": "https://images.unsplash.com/photo-1615044088186-a2342db7b272?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFyYmVxdWUlMjBmaXNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "category": "most ordered meals",
+      "countInStock": 500,
+      "price": 499,
+      "description": "Hot cassava made meal",
+      "reviews": [
+        {
+          "id": "1",
+          "rating": 5,
+          "comment": "Amazing Amala Dish",
+          "author": "John Lemon",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "2",
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "3",
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "4",
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "5",
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "Hot",
+      "featured": true,
+      "name": "Barbeque chicken",
+      "image": "https://images.unsplash.com/photo-1614398750956-402891a7dce1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmFyYmVxdWUlMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "category": "most ordered meals",
+      "countInStock": 500,
+      "price": 499,
+      "description": "Hot cassava made meal",
+      "reviews": [
+        {
+          "id": "1",
+          "rating": 5,
+          "comment": "Amazing Amala Dish",
+          "author": "John Lemon",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "2",
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "3",
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "4",
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "5",
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Hot",
+      "featured": true,
+      "name": "Pie",
+      "image": "https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGllfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "category": "most ordered meals",
+      "countInStock": 500,
+      "price": 499,
+      "description": "Hot cassava made meal",
+      "reviews": [
+        {
+          "id": "1",
+          "rating": 5,
+          "comment": "Amazing Amala Dish",
+          "author": "John Lemon",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "2",
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "3",
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "4",
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "5",
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "label": "Hot",
+      "featured": true,
+      "name": "White Doughnuts",
+      "image": "https://images.unsplash.com/photo-1599629962786-865a0bdec853?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvdWdobnV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "category": "most ordered meals",
+      "countInStock": 500,
+      "price": 499,
+      "description": "Hot cassava made meal",
+      "reviews": [
+        {
+          "id": "1",
+          "rating": 5,
+          "comment": "Amazing Amala Dish",
+          "author": "John Lemon",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "2",
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "3",
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "4",
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        },
+        {
+          "id": "5",
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "updatedAt": "2021-07-23T16:20:37.066Z",
+          "createdAt": "2021-07-23T16:20:37.066Z"
+        }
+      ]
+    }
+  ]
+}

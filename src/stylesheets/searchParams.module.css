@@ -1,0 +1,8 @@
+.selectInput,
+.searchInput {
+  border-radius: 50px;
+  width: 26rem;
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid #000;
+}
