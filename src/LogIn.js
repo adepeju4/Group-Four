@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux'
+import { login } from './redux/action/userAction'
 
 
 import styles from './stylesheets/login.module.css'
@@ -6,10 +8,13 @@ import styles from './stylesheets/login.module.css'
 
 const LogIn = () => {
 
+  const dispatch = useDispatch()
+
   const [signinData, setsigninData] = useState({
     email: '',
     password: ''
   })
+
 
   const {email, password} = signinData
 
@@ -23,6 +28,8 @@ const LogIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    dispatch(login(email, password))
 
     setsigninData({
       email: '',

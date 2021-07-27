@@ -3,11 +3,16 @@ import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
 import Checkout from "./Checkout.js";
+// import { useSelector } from "react-redux";
 // import Footer from "./Components/Footer.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
+
+  // const userLogin = useSelector((state) => state.userLogin)
+  // const {user} = userLogin
+
   return (
     <div className="App">
       <BrowserRouter>
