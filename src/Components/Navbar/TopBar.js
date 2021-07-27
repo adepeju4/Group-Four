@@ -26,16 +26,7 @@ const TopBar = ({ checkout }) => {
           <p>foodine</p>
         </div>
 
-        <button
-          className={styles.menuToggle}
-          onClick={() => setStatus(status === false ? true : false)}
-        >
-          <i className={status ? styles.open : styles.close}></i>
-          <i className={status ? styles.open : styles.close}></i>
-          <i className={status ? styles.open : styles.close}></i>
-        </button>
-
-        <div className={styles.navContent}>
+        <div className={styles.navContent} id={status ? styles.menuHidden : ""}>
           <ul>
             <li>
               <button className={styles.cart}>
@@ -50,10 +41,19 @@ const TopBar = ({ checkout }) => {
             </li>
           </ul>
         </div>
+        <div className={status ? styles.menuMask : ""}></div>
+
+        <button
+          className={styles.menuToggle}
+          onClick={() => setStatus(status === false ? true : false)}
+        >
+          <i className={status ? styles.open : styles.close}></i>
+          <i className={status ? styles.open : styles.close}></i>
+          <i className={status ? styles.open : styles.close}></i>
+        </button>
       </div>
     </div>
   );
 };
 
-// [styles.arrowLeft, props.className].join(" ");
 export default TopBar;
