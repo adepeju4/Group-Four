@@ -102,3 +102,24 @@ export const ArrowLeft = (props) => {
     </div>
   );
 };
+
+
+export const dropDownArrow = () => {
+  return (
+    <svg
+      width="20"
+      height="12"
+      viewBox="0 0 20 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 0.999985L10 10.8185L19 0.999985"
+        stroke="black"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

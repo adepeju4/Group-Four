@@ -4,7 +4,9 @@
   padding-left: 56px;
   padding-right: 56px;
 }
-
+.signUp a:hover{
+  color: #fff !important;
+}
 .circle {
   transform: scaleX(-1);
   position: absolute;
@@ -250,8 +252,7 @@
   padding-right: 20px;
 }
 
-.searchInput input,
-.filterInput select {
+.searchInput input{
   padding: 0.5rem 1rem;
   border-radius: 50px;
   outline: none;
@@ -285,7 +286,14 @@
   bottom: 40px;
   left: 0;
 }
-
+.searchInput {
+    border-radius: 50px;
+    width: 14rem;
+   padding: 0.7rem 1rem;
+    outline: none;
+    border: 1px solid #000;
+  margin-right: 2rem;
+  }
 .mostOrderedDish {
   width: 100%;
 
@@ -306,6 +314,13 @@
   align-items: center;
   justify-content: space-between;
   height: 10rem;
+}
+.selectInput {
+  border-radius: 50px;
+  width: 26rem;
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid #000;
 }
 
 @media (max-width: 400px) {
@@ -339,7 +354,7 @@
   .landingNav a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .logIn a {
     background: #ffda7f;
@@ -364,8 +379,10 @@
     justify-content: space-between;
     align-items: center;
   }
+  
   .filterContainer {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-end;
     width: 54.4rem;
   }
 }

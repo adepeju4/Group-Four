@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "./stylesheets/landing.module.css";
 import {
   LightVariantCart,
@@ -7,38 +8,21 @@ import {
 } from "./Components/Icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import Footer from "./Components/Footer";
-import { DropdownFilter, Search } from "./Components/SearchParams";
+
 import { AllDishesList, MostOrderedMeals } from "./Components/DishesList";
-import { useEffect } from "react";
+import useAxios from "./Hooks/useAxios";
+import DropDownFilter from "./Components/Dropdown";
+
+
 
 const Landing = () => {
   const [status, setStatus] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [category, setCategory] = useState("");
 
-  const [dishes, setDishes] = useState(null);
-  // eslint-disable-next-line no-unused-vars
-  const [pending, setIsPending] = useState(true);
-  const filterDishes = (e) => {
-    const searchTerm = e.target.value;
-    return setDishes(() => {
-      return dishes.filter((dish) => {
-        let regex = new RegExp(searchTerm, "gi");
-        return regex.test(dish.name);
-      });
-    });
-  };
-
-  useEffect(() => {
-    fetch("http://localhost:8000/dishes")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setDishes(data);
-        setIsPending(false);
-      });
-  }, []);
+  const { data, isPending, error } = useAxios("http://localhost:8000/dishes");
 
   return (
     <div className={styles.landing}>
@@ -121,7 +105,7 @@ const Landing = () => {
         <RightPlate className={styles.right} />
 
         <div className={styles.next}>
-          <Link>
+          <Link to="#main">
             <svg
               width="35"
               height="35"
@@ -146,18 +130,27 @@ const Landing = () => {
           <div className={styles.modHeader}>
             <h2>Most Ordered Meals</h2>
           </div>
-          <MostOrderedMeals />
+          {data && <MostOrderedMeals />}
         </div>
         <div className={styles.allDishes}>
           <div className={styles.allDishesHeader}>
             <h3>Our Dishes</h3>
             <div className={styles.filterContainer}>
-              <DropdownFilter />
-              <Search filter={filterDishes} />
+
+              <input
+                type="text"
+                name="dishes"
+                id={styles.dishes}
+                placeholder="Search"
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className={styles.searchInput}
+              />
+             
+       <DropDownFilter/>
             </div>
           </div>
-          {dishes && <AllDishesList dishes={dishes} />}
-          {pending && <h3>Loading</h3>}
+          {data && <AllDishesList dishes={data} searchTerm={searchTerm} />}
+          {isPending && <h3>Loading</h3>}
         </div>
       </div>
       <Footer />
