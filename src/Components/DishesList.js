@@ -5,19 +5,28 @@ import styles from "../stylesheets/dishesList.module.css";
 import useAxios from "../Hooks/useAxios";
 
 // eslint-disable-next-line no-unused-vars
-export const AllDishesList = ({ dishes, searchTerm }) => {
+export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => {
+  const filterBySearch = (dish) => {
+    if(searchTerm) {
+      return dish.name.toLowerCase().includes(searchTerm.toLowerCase());
+    }
+
+    return true;
+  };
+
+  const filterByCategory = (dish) => {
+    if(category) {
+      return category === dish.category;
+    }
+
+    return true;
+  };
+
   return (
     <div className={styles.dishesList}>
       {dishes
-        .filter((val) => {
-          if (searchTerm === "") {
-            return val;
-          } else if (
-            val.name.toLowerCase().includes(searchTerm.toLowerCase())
-          ) {
-            return val;
-          }
-        })
+        .filter(filterBySearch)
+        .filter(filterByCategory)
         .map((dish) => (
           <div className={styles.dishContainer} key={dish.id}>
             <Link to="#" className={styles.dishContainer}>
@@ -60,3 +69,4 @@ export const MostOrderedMeals = () => {
     </div>
   );
 };
+

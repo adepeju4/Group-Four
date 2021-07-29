@@ -361,7 +361,7 @@
     color: #000 !important;
     padding: 10px 20px;
     border-radius: 20px;
-
+   font-size: 1.5rem;
     width: auto;
   }
   .signUp {
@@ -369,9 +369,11 @@
     border: 1px solid #fff;
     border-radius: 20px;
     padding: 10px 20px;
+       font-size: 1.5rem;
   }
   .landingNav .navLinks a {
     color: white;
+    font-size: 1.5rem;
   }
   .allDishesHeader {
     display: flex;
@@ -385,6 +387,7 @@
     justify-content: flex-end;
     width: 54.4rem;
   }
+
 }
 
 @media (min-width: 991.98px) {

@@ -20,7 +20,9 @@ import DropDownFilter from "./Components/Dropdown";
 const Landing = () => {
   const [status, setStatus] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+
   const [category, setCategory] = useState("");
+
 
   const { data, isPending, error } = useAxios("http://localhost:8000/dishes");
 
@@ -146,10 +148,10 @@ const Landing = () => {
                 className={styles.searchInput}
               />
              
-       <DropDownFilter/>
+              <DropDownFilter category={category} setCategory={setCategory} dishes={data}/>
             </div>
           </div>
-          {data && <AllDishesList dishes={data} searchTerm={searchTerm} />}
+          {data && <AllDishesList category={category} setCategory={setCategory} dishes={data} searchTerm={searchTerm} />}
           {isPending && <h3>Loading</h3>}
         </div>
       </div>
