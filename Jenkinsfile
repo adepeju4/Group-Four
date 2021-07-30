@@ -11,7 +11,7 @@ pipeline {
             stage ('Deploy') { 
                 steps { 
                     sh "echo 'Running Deployment phase phase.'"
-                    sh "sudo npm build"
+                    sh "sudo npm run build"
                     sh "ls"
                     sh "sudo cp -r build/ /var/www/html"
                 }
