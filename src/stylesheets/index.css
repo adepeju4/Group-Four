@@ -26,3 +26,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

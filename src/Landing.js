@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "./stylesheets/landing.module.css";
 import {
   LightVariantCart,
@@ -5,15 +6,26 @@ import {
   RightPlate,
   LeftPlate,
 } from "./Components/Icons";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import Footer from "./Components/Footer";
-// eslint-disable-next-line no-unused-vars
-// import { animateScroll as scroll } from "react-scroll";
+
+import { AllDishesList, MostOrderedMeals } from "./Components/DishesList";
+import useAxios from "./Hooks/useAxios";
+import DropDownFilter from "./Components/Dropdown";
+
+
 
 const Landing = () => {
-  // const scrollToTop = () => {
-  //   scroll.scrollToTop();
-  // };
+  const [status, setStatus] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const [category, setCategory] = useState("");
+
+
+  const { data, isPending, error } = useAxios("http://localhost:8000/dishes");
+
   return (
     <div className={styles.landing}>
       <div className={styles.heroSection}>
@@ -22,35 +34,45 @@ const Landing = () => {
           <div className={styles.logo}>
             <Link to="/">foodine</Link>
           </div>
-          <ul className={styles.landingNav}>
-            <li className={styles.navLinks}>
-              <Link to="/cart">
-                <LightVariantCart />
-              </Link>
-            </li>
-            <li className={styles.navLinks}>
-              <Link to="/about">About</Link>
-            </li>
-            <li className={styles.navLinks}>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li className={[styles.signUp]}>
-              <Link
-                to="/signup"
-                style={{ textDecoration: "none", color: "#fff" }}
-              >
-                Sign Up
-              </Link>
-            </li>
-            <li className={[styles.logIn]}>
-              <Link
-                to="/login"
-                style={{ textDecoration: "none", color: "#000" }}
-              >
-                Log In
-              </Link>
-            </li>
-          </ul>
+          <div className={styles.mobileContainer}>
+            <div id={status ? styles.mobileNav : ""}>
+              <ul className={styles.landingNav}>
+                <li>
+                  <p>foodine</p>
+                </li>
+                <li className={styles.navLinks}>
+                  <Link to="/cart">
+                    <LightVariantCart landing={true} />
+                    <p className={styles.cartText}>Cart</p>
+                  </Link>
+                </li>
+                <li className={styles.navLinks}>
+                  <Link to="/about">About</Link>
+                </li>
+                <li className={styles.navLinks}>
+                  <Link to="/contact">Contact</Link>
+                </li>
+                <li className={[styles.signUp]}>
+                  <Link to="/signup">Sign Up</Link>
+                </li>
+                <li className={[styles.logIn]}>
+                  <Link to="/login">Log In</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className={status ? styles.menuMask : ""}
+            onClick={() => setStatus(false)}
+          ></div>
+          <button
+            className={styles.menuToggle}
+            onClick={() => setStatus(status === false ? true : false)}
+          >
+            <i className={status ? styles.open : styles.close}></i>
+            <i className={status ? styles.open : styles.close}></i>
+            <i className={status ? styles.open : styles.close}></i>
+          </button>
         </div>
         <div className={styles.heroContent}>
           <div>
@@ -85,14 +107,7 @@ const Landing = () => {
         <RightPlate className={styles.right} />
 
         <div className={styles.next}>
-          <Link
-          // to="#main"
-          // activeClass="active"
-          // spy={true}
-          // smooth={true}
-          // offset={-70}
-          // duration={500}
-          >
+          <Link to="#main">
             <svg
               width="35"
               height="35"
@@ -112,7 +127,34 @@ const Landing = () => {
           </Link>
         </div>
       </div>
-      <div id="main" className={styles.main}></div>
+      <div id="main" className={styles.main}>
+        <div className={styles.mostOrderedDish}>
+          <div className={styles.modHeader}>
+            <h2>Most Ordered Meals</h2>
+          </div>
+          {data && <MostOrderedMeals />}
+        </div>
+        <div className={styles.allDishes}>
+          <div className={styles.allDishesHeader}>
+            <h3>Our Dishes</h3>
+            <div className={styles.filterContainer}>
+
+              <input
+                type="text"
+                name="dishes"
+                id={styles.dishes}
+                placeholder="Search"
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className={styles.searchInput}
+              />
+             
+              <DropDownFilter category={category} setCategory={setCategory} dishes={data}/>
+            </div>
+          </div>
+          {data && <AllDishesList category={category} setCategory={setCategory} dishes={data} searchTerm={searchTerm} />}
+          {isPending && <h3>Loading</h3>}
+        </div>
+      </div>
       <Footer />
     </div>
   );

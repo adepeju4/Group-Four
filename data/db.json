@@ -1,0 +1,171 @@
+{
+    "dishes": [{
+            "id": "1",
+            "label": "Hot",
+            "featured": true,
+            "name": "Apple pie",
+            "image": "https://images.unsplash.com/photo-1621743478914-cc8a86d7e7b5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwcGxlJTIwcGllfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            "category": "pastries",
+            "countInStock": 500,
+            "price": 4999,
+            "description": "Hot cassava made meal",
+            "reviews": [{
+                    "id": "1",
+                    "rating": 5,
+                    "comment": "Amazing Amala Dish",
+                    "author": "John Lemon",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                },
+                {
+                    "id": "2",
+                    "rating": 4,
+                    "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                    "author": "Paul McVites",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "label": "Hot",
+            "featured": false,
+            "name": "Doughnuts",
+            "image": "https://images.unsplash.com/photo-1583096114844-06ce5a5f2171?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZG91Z2hudXRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            "category": "pastries",
+            "countInStock": 500,
+            "price": 100,
+            "description": "Hot cassava made meal",
+            "reviews": [{
+                    "id": "1",
+                    "rating": 5,
+                    "comment": "Amazing Amala Dish",
+                    "author": "John Lemon",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                },
+                {
+                    "id": "2",
+                    "rating": 4,
+                    "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                    "author": "Paul McVites",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "label": "Hot",
+            "featured": true,
+            "name": "Titus Fish Dish",
+            "image": "https://images.unsplash.com/photo-1611695500858-e6ac19b1ca55?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRpdHVzJTIwZmlzaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            "category": "seafood",
+            "countInStock": 500,
+            "price": 10000,
+            "description": "Hot cassava made meal",
+            "reviews": [{
+                    "id": "1",
+                    "rating": 5,
+                    "comment": "Amazing Amala Dish",
+                    "author": "John Lemon",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                },
+                {
+                    "id": "2",
+                    "rating": 4,
+                    "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                    "author": "Paul McVites",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "label": "Hot",
+            "featured": false,
+            "name": "Chicken",
+            "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            "category": "proteins",
+            "countInStock": 500,
+            "price": 10000,
+            "description": "Hot cassava made meal",
+            "reviews": [{
+                    "id": "1",
+                    "rating": 5,
+                    "comment": "Amazing Amala Dish",
+                    "author": "John Lemon",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                },
+                {
+                    "id": "2",
+                    "rating": 4,
+                    "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                    "author": "Paul McVites",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "label": "Hot",
+            "featured": true,
+            "name": "Chicken Pasta",
+            "image": "https://images.unsplash.com/photo-1593536748623-e7f2614e3b17?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWNrZW4lMjBkaXNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            "category": "proteins",
+            "countInStock": 500,
+            "price": 10000,
+            "description": "Hot cassava made meal",
+            "reviews": [{
+                    "id": "1",
+                    "rating": 5,
+                    "comment": "Amazing Amala Dish",
+                    "author": "John Lemon",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                },
+                {
+                    "id": "2",
+                    "rating": 4,
+                    "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                    "author": "Paul McVites",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "label": "Hot",
+            "featured": false,
+            "name": "Broccoli",
+            "image": "https://images.unsplash.com/photo-1614336215203-05a588f74627?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnJvY2NvbGl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            "category": "vegetables",
+            "countInStock": 500,
+            "price": 10000,
+            "description": "Hot cassava made meal",
+            "reviews": [{
+                    "id": "1",
+                    "rating": 5,
+                    "comment": "Amazing Amala Dish",
+                    "author": "John Lemon",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                },
+                {
+                    "id": "2",
+                    "rating": 4,
+                    "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                    "author": "Paul McVites",
+                    "updatedAt": "2021-07-23T16:20:37.066Z",
+                    "createdAt": "2021-07-23T16:20:37.066Z"
+                }
+            ]
+        }
+    ]
+}

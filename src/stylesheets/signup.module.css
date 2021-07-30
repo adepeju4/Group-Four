@@ -3,15 +3,16 @@
 }
 .first {
   /* position: relative; */
+  height: 110vh;
 
   display: inline-block;
   width: 35%;
   overflow: hidden;
-  margin-bottom: -7px;
+  margin-bottom: -0.438rem;
 }
 
 .image {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -21,10 +22,16 @@
   width: 100%;
 }
 
+.image .img2{
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  height: 1.7rem;
+}
+
 .logo {
-  font-size: 29px;
+  font-size: 1.813rem;
   font-weight: 600;
-  /* color: #fff; */
 }
 .image .logo {
   position: absolute;
@@ -37,129 +44,202 @@
 
 .logo p {
   color: #fff;
+  cursor: default;  
 }
 
 .second {
-  height: 100vh;
-  /* background-color: darkseagreen; */
+  height: 110vh;
   display: inline-block;
   width: 65%;
   overflow: hidden;
-  margin-bottom: -7px;
+  margin-bottom: -0.438rem;
 }
 
 .details {
-  margin: 15% auto;
-  /* background-color: chartreuse; */
+  margin: 22% auto;
   width: 60%;
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
+}
+
+.h5{
+  font-size: 1.2rem;
 }
 
 .googlebutton {
-  /* background-color: darkgreen; */
-  margin: 20px 0 0 0;
+  margin: 20px 0;
 }
 
 .googlebutton > button {
-  padding: 7px 93px;
+  padding: 0.75rem 0;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: 1px solid black;
+  width: 100%;
 }
 
 .googlebutton > button:hover {
-  padding: 7px 93px;
+  padding: 0.75rem 0;
   background-color: #000;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: 1px solid black;
   color: #fff;
   cursor: pointer;
 }
 
+.FaGoogle{
+  display: inline-block;
+  padding: 0 0.375rem 0 0;
+  position: inherit;
+  font-size: 1.2rem;
+}
+
 .btn {
-  font-size: 15px;
+  font-size: 0.688rem;
   font-weight: 600;
 }
 
 .form {
   margin: 0 auto;
-  /* background-color: chocolate; */
-  width: 62%;
-  padding: 20px 0;
+  width: 65%;
+}
+
+.success{
+  font-size: 2rem;
+}
+
+.name {
+  padding: 0 0.313rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  display: block;
 }
 
 .email {
-  padding: 0 5px;
-  font-size: 10px;
+  padding: 0 0.313rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
   display: block;
 }
 
 .password {
-  padding: 0 5px;
-  font-size: 10px;
+  padding: 0 0.313rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
   display: block;
 }
-.inputEmail {
-  /* padding: 0 3px; */
-  height: 30px;
+
+.confirmPassword {
+  padding: 0 0.313rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  display: block;
+}
+
+.inputName {
+  height: 2.5rem;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.313rem;
+  outline: none;
+  padding-left: 0.5rem;
+  border: 0.5px black solid;
+}
+
+.inputEmail {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.313rem;
   outline: none;
   padding-left: 0.5rem;
   border: 0.5px black solid;
 }
 
 .inputPassword {
-  /* padding: 0 3px; */
-  height: 30px;
+  height: 2.5rem;
   width: 100%;
-  border-radius: 5px;
-  padding-left: 0.5rem;
+  border-radius: 0.313rem;
   outline: none;
+  padding-left: 0.5rem;
   border: 0.5px black solid;
 }
 
+.inputConfirmPassword {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.313rem;
+  outline: none;
+  padding-left: 0.5rem;
+  border: 0.5px black solid;
+}
+
+.section0 {
+  margin: 0.313rem 0;
+}
+
+.section0 > .name > span{
+  font-size: 1.2rem;
+  color: red;
+}
+
 .section1 {
-  margin: 20px 0;
-  /* background-color: crimson; */
+  margin: 0.313rem 0;
+}
+
+.section1 > .email> span{
+  font-size: 1.2rem;
+  color: red;
 }
 
 .section2 {
-  margin: 20px 0;
-  /* background-color: darkgoldenrod; */
+  margin: 0.313rem 0;
 }
 
+.section2 > .password > span{
+  font-size: 1.2rem;
+  color: red;
+}
 .section3 {
-  margin: 40px 0;
-  /* background-color: darkslateblue; */
+  margin: 0.313rem 0;
 }
 
-.section3 > button {
-  padding: 7px 93px;
+.section3 > .confirmPassword > span{
+  font-size: 1.2rem;
+  color: red;
+}
+
+.section4 {
+  margin: 1.25rem 0;
+}
+
+.section4 > span{
+  font-size: 1.2rem;
+  color: red;
+}
+
+.section4 > button {
   background-color: #000;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: 1px solid black;
   color: #fff;
   width: 100%;
   cursor: pointer;
-  height: 40px;
+  height: 2.5rem;
 }
 
 .btn2 {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 0.813rem;
+  font-weight: 600;
 }
 
 .restaurant {
   position: absolute;
   top: 72%;
   right: 5%;
-  height: 130px;
+  height: 8.125rem;
   transform: rotate(-12deg);
 }
 
@@ -167,6 +247,594 @@
   position: absolute;
   top: 5%;
   right: 50%;
-  height: 130px;
+  height: 8.125rem;
   transform: rotate(40deg);
+}
+
+
+@media (min-width: 1400px) and (max-width: 2000px) {
+  .details {
+    margin: 22% auto;
+    width: 60%;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .FaGoogle{
+    display: inline-block;
+    padding: 0 0.375rem 0 0;
+    position: inherit;
+    font-size: 1.2rem;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+  
+  .email {
+    font-size: 1.2rem;
+  }
+  
+  .password {
+    font-size: 1.2rem;
+  }
+
+  .confirmPassword {
+    font-size: 1.2rem;
+  }
+
+  .inputName {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .inputEmail {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  
+  .inputPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .inputConfirmPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  
+  .section4 {
+    margin: 2.5rem 0;
+  }  
+  .restaurant {
+    position: absolute;
+    top: 85%;
+    right: 4%;
+    height: 5rem;
+    transform: rotate(-12deg);
+  }
+  
+  .restaurant2 {
+    position: absolute;
+    top: 12%;
+    right: 54%;
+    height: 5rem;
+    transform: rotate(40deg);
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1400px) {
+  .details {
+      margin: 18% auto;
+      width: 60%;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .FaGoogle{
+      display: inline-block;
+      padding: 0 0.375rem 0 0;
+      position: inherit;
+      font-size: 1.2rem;
+    }
+
+    .form {
+      width: 80%;
+    }
+
+    .h5{
+      font-size: 1.2rem;
+    }
+
+    .name {
+      font-size: 1.2rem;
+    }
+
+    .section0 > .name > span{
+      font-size: 1.2rem;
+      color: red;
+    }
+    
+    .email {
+      font-size: 1.2rem;
+    }
+
+    .section1 > .email > span{
+      font-size: 1.2rem;
+      color: red;
+    }
+    
+    .password {
+      font-size: 1.2rem;
+
+    }
+
+    .section2 > .password > span{
+      font-size: 1.2rem;
+      color: red;
+    }
+  
+    .confirmPassword {
+      font-size: 1.2rem;
+    }
+
+    .section3 > .confirmPassword > span{
+      font-size: 1.2rem;
+      color: red;
+    }
+
+    .inputName {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  
+    .inputEmail {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+    
+    .inputPassword {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+  
+    .inputConfirmPassword {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+    
+    .section4 {
+      margin: 2.5rem 0;
+    }  
+    .section4 button {
+      font-size: 1.1rem;
+    }
+    .restaurant {
+      position: absolute;
+      top: 85%;
+      right: 4%;
+      height: 5rem;
+      transform: rotate(-12deg);
+    }
+    
+    .restaurant2 {
+      position: absolute;
+      top: 12%;
+      right: 54%;
+      height: 5rem;
+      transform: rotate(40deg);
+    }
+}
+
+@media (min-width: 750px) and (max-width: 960px) {
+  .details {
+      margin: 20% auto;
+      width: 75%;
+    }
+  
+  .form {
+      width: 80%;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+    }
+    .FaGoogle{
+      font-size: 1.2rem;
+    }
+
+    .name {
+      font-size: 1.2rem;
+    }
+    .email {
+      font-size: 1.2rem;
+    }
+    .password {
+      font-size: 1.2rem;
+    }
+    .confirmPassword {
+      font-size: 1.2rem;
+    }
+
+    .inputConfirmPassword {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+
+    .restaurant {
+      top: 85%;
+      right: 4%;
+      height: 5rem;
+    }
+    
+    .restaurant2 {
+      top: 12%;
+      right: 54%;
+      height: 5rem;
+    }
+    .section4 {
+      margin: 2.5rem 0;
+    } 
+    .section4 button {
+      font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
+  .googlebutton {
+      margin: 0.563rem 0;
+    }  
+  .FaGoogle{
+      font-size: 1.2rem;
+    }
+  
+    .btn {
+      font-size: 1.2rem;
+    }
+    .details {
+      width: 70%;
+      margin: 22% auto;
+    }
+
+    .form {
+      width: 100%;
+    }
+    
+    .restaurant {
+      top: 85%;
+      right: 4%;
+      height: 3.75rem;
+    }
+    
+    .restaurant2 {
+      top: 10%;
+      right: 54%;
+      height: 3.75rem;
+    }
+
+    .logo {
+      font-size: 1.813rem;
+    }
+    .inputConfirmPassword {
+      font-size: 1.2rem;
+      width: 100%;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 550px) {
+  .googlebutton {
+    margin: 0.563rem 0;
+  }  
+.FaGoogle{
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+  .details {
+    margin: 35% auto;
+    width: 70%;
+  }
+
+  .form {
+    width: 100%;
+  }
+  
+  .restaurant {
+    top: 85%;
+    right: 4%;
+    height: 3.75rem;
+  }
+  
+  .restaurant2 {
+    top: 10%;
+    right: 54%;
+    height: 3.75rem;
+  }
+
+  .logo {
+    font-size: 1.813rem;
+  }
+  .section0{
+    margin: 1rem 0;
+  }
+  .section1{
+    margin: 1rem 0;
+  }
+  .section2{
+    margin: 1rem 0;
+  }
+  .section3{
+    margin: 1rem 0;
+  }
+  .section4{
+    margin: 2.5rem 0;
+  }
+  .inputName {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputEmail {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputConfirmPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  }
+@media (min-width: 350px) and (max-width: 500px) {
+  .img {
+    width: 100%;
+    height: 30%;
+  }
+  .first {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -0.438rem;
+    height: 20vh;
+  }
+  .image .img2{
+    top: 20%;
+  }
+  .second {
+    height: 85vh;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+  }  
+  .image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+  }  
+.img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .details {
+    margin: 12% auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .form {
+    height: 75%;
+    width: 80%;
+  }
+  .h5 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .image .logo {
+    top: 45%;
+  }
+
+  .googlebutton {
+    margin: 0.313rem 0;
+  }  
+
+  .restaurant {
+    top: 85%;
+    right: 4%;
+    height: 2.5rem;
+  }
+  
+  .restaurant2 {
+    top: 25%;
+    right: 80%;
+    height: 2.5rem;
+  }
+  .FaGoogle{
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;  
+    font-size: 1.2rem;
+  }
+  .inputName {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputEmail {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputConfirmPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .googlebutton > button {
+    padding: 0.438rem 0;
+  }
+  
+  .googlebutton > button:hover {
+    padding: 0.438rem 0;
+  }
+  
+  .section0 {
+    margin: 1.25rem 0;
+  }
+
+  .section1 {
+    margin: 1.25rem 0;
+  }
+  
+  .section2 {
+    margin: 1.25rem 0;
+  }
+  .section3 {
+    margin: 1.25rem 0;
+  }
+  
+  .section4 {
+    margin: 1.25rem 0;
+  }  
+}
+
+@media (min-width: 280px) and (max-width: 350px) {
+  .img {
+    width: 100%;
+    height: 30%;
+  }
+  .first {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -0.438rem;
+    height: 20vh;
+  }
+  .image .img2{
+    top: 20%;
+  }
+  .second {
+    height: 85vh;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+  }  
+  .image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+  }  
+.img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .details {
+    margin: 12% auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .form {
+    height: 75%;
+    width: 80%;
+  }
+  .h5 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .image .logo {
+    top: 45%;
+  }
+
+  .googlebutton {
+    margin: 0.313rem 0;
+  }  
+
+  .restaurant {
+    top: 85%;
+    right: 4%;
+    height: 2.5rem;
+  }
+  
+  .restaurant2 {
+    top: 25%;
+    right: 80%;
+    height: 2.5rem;
+  }
+  .FaGoogle{
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;  
+    font-size: 1.2rem;
+  }
+  .inputName {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputEmail {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .inputConfirmPassword {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .googlebutton > button {
+    padding: 0.438rem 0;
+  }
+  
+  .googlebutton > button:hover {
+    padding: 0.438rem 0;
+  }
+  
+  .section0 {
+    margin: 1.25rem 0;
+  }
+
+  .section1 {
+    margin: 1.25rem 0;
+  }
+  
+  .section2 {
+    margin: 1.25rem 0;
+  }
+  .section3 {
+    margin: 1.25rem 0;
+  }
+  
+  .section4 {
+    margin: 1.25rem 0;
+  }  
 }

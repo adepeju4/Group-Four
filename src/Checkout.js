@@ -8,7 +8,7 @@ const Checkout = () => {
     <>
       <Circle />
       <div className={styles.hero} style={{ height: "100vh" }}>
-        <TopBar checkout={true} backButton={true} />
+        <TopBar checkout={true} />
         <div className={styles.heroContent}></div>
       </div>
 

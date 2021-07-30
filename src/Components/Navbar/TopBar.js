@@ -2,7 +2,9 @@
 import { useHistory } from "react-router";
 import { ArrowLeft, DarkVariantCart } from "../Icons";
 import styles from "../../stylesheets/topbar.module.css";
+
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TopBar = ({ checkout }) => {
   const history = useHistory();
@@ -26,6 +28,32 @@ const TopBar = ({ checkout }) => {
           <p>foodine</p>
         </div>
 
+        <div className={styles.navContent} id={status ? styles.menuHidden : ""}>
+          <ul>
+            <li>
+              <h1>foodine</h1>
+            </li>
+            <li>
+              <p className={styles.userName}>Hello Tosin</p>
+            </li>
+            <li>
+              <button className={styles.cart}>
+                <p className={styles.cartText}>Cart </p> <DarkVariantCart />
+              </button>
+            </li>
+            <li>
+              <Link>Favorites</Link>
+            </li>
+
+            <li>
+              <button className={styles.logout}>Logout</button>
+            </li>
+          </ul>
+        </div>
+        <div
+          className={status ? styles.menuMask : ""}
+          onClick={() => setStatus(false)}
+        ></div>
         <button
           className={styles.menuToggle}
           onClick={() => setStatus(status === false ? true : false)}
@@ -34,26 +62,9 @@ const TopBar = ({ checkout }) => {
           <i className={status ? styles.open : styles.close}></i>
           <i className={status ? styles.open : styles.close}></i>
         </button>
-
-        <div className={styles.navContent}>
-          <ul>
-            <li>
-              <button className={styles.cart}>
-                <DarkVariantCart />
-              </button>
-            </li>
-            <li>
-              <p>Tosin</p>
-            </li>
-            <li>
-              <button className={styles.logout}>Logout</button>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );
 };
 
-// [styles.arrowLeft, props.className].join(" ");
 export default TopBar;

@@ -1,13 +1,20 @@
 import { loginTypes } from "../type/loginType"
 
-export const loginReducer = (state = {}, action) => {
+const initialState = {
+    isAuthenticated: false,
+    user: {},
+    isLoading: false,
+    error: {}
+};
+
+export const loginReducer = (state = initialState, action) => {
     switch(action.type) {
         case loginTypes.LOGIN_REQUEST:
-            return { isLoading: true }
+            return { ...state, isLoading: true }
         case loginTypes.LOGIN_SUCCESS:
-            return { isLoading: false, user: action.payload }
+            return { ...state, isLoading: false, user: action.payload }
         case loginTypes.LOGIN_FAIL:
-            return { isLoading: false, error: action.payload }
+            return { ...state, isLoading: false, error: action.payload }
         case loginTypes.LOGOUT: 
             return { }
         default:
