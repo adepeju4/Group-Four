@@ -23,6 +23,7 @@ const DropDownFilter = ({ dishes, category, setCategory }) => {
         <option value="seafood">Seafood</option>
         <option value="vegetables">Vegetables</option>
         <option value="proteins">Proteins</option>
+        <option value="pastries">Pastries</option>
       </select>
     </div>
   );
