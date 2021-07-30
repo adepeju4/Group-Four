@@ -46,7 +46,7 @@ export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => 
 
 export const MostOrderedMeals = () => {
   const { data: dishes } = useAxios(
-    "http://localhost:8000/dishes",{params:{category: "most ordered meals"}}
+    "http://localhost:8000/dishes",{params:{featured: true}}
   );
   return (
     <div className={styles.dishesList}>
