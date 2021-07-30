@@ -1,0 +1,88 @@
+.productBody{
+    padding: 5rem;
+}
+
+.productPreview{
+    margin-top: 5rem;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.productInfo{
+    grid-column: 1/3;
+}
+
+.productPreview h1{
+    font-size: 9.6rem;
+}
+
+.productPreview .productInfo h3{
+    font-size: 4.8rem;
+}
+
+.productPreview .productInfo h3:nth-of-type(1){
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.productPreview p{
+    font-size: 2rem;
+}
+
+.cta{
+    color: #fff;
+    background: #000;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    width: 27.5rem;
+    height: 7.3rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.productImage{
+
+    margin-top: 4rem;
+}
+
+.productImage img{
+    width: 100%;
+    
+}
+
+.productMedia{
+display: flex;
+flex-direction: column;
+}
+
+.ratingIcon{
+    width: 3rem;
+    height: 3rem;
+}
+
+.likeButton{
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    align-self: flex-end;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: crimson;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.25);
+}
+
+.likeButton:active{
+    fill: crimson;
+}
+
+.shareProduct h3{
+    font-size: 4.8rem;
+    align-self: flex-end;
+}

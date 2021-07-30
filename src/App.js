@@ -3,6 +3,7 @@ import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
 import Checkout from "./Checkout.js";
+import Product from "./Product.js"
 
 // import Footer from "./Components/Footer.js";
 
@@ -28,6 +29,9 @@ function App() {
               <SignUp />
             </Route>
 
+            <Route path="/dishes/:id">
+              <Product />
+            </Route>
             <Route path="/cart">
               <Cart />
             </Route>

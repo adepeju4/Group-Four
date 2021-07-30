@@ -3,6 +3,7 @@ pipeline {
         stages { 
             stage ('Build') { 
                 steps { 
+                    
                     sh "echo 'Running build phase. '"
                     sh "yarn"
                 }

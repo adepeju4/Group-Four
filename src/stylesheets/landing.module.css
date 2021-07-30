@@ -4,6 +4,10 @@
   padding-left: 56px;
   padding-right: 56px;
 }
+.main{
+    padding-left: 56px;
+  padding-right: 56px;
+}
 .signUp a:hover{
   color: #fff !important;
 }
@@ -75,9 +79,7 @@
 
   align-self: center;
 }
-.main {
-  padding: 3rem;
-}
+
 .logIn {
   background: transparent;
   color: #000;
@@ -114,6 +116,14 @@
   height: 70vh;
   display: flex;
   align-items: center;
+}
+
+.heroContent .heroCaption{
+  font-size: 3.3rem;
+}
+
+.heroContent div p{
+  font-size: 1.4rem;
 }
 
 .left,
@@ -292,7 +302,7 @@
    padding: 0.7rem 1rem;
     outline: none;
     border: 1px solid #000;
-  margin-right: 2rem;
+  
   }
 .mostOrderedDish {
   width: 100%;
@@ -303,28 +313,52 @@
 
 .allDishesHeader {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   height: 15rem;
+  align-items: center;
 }
 
 .filterContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 10rem;
-}
-.selectInput {
-  border-radius: 50px;
-  width: 26rem;
-  padding: 1rem 1rem;
-  outline: none;
-  border: 1px solid #000;
+
+   flex-direction: column;
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    justify-content: space-around;
 }
 
+
+  .clients{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(7rem, auto);
+justify-content: center;
+}
+
+.clients img{
+  
+  justify-self: center;
+  align-self: center;
+  width: 8rem;
+}
+
+.clients .clientsHeading{
+    grid-column: 1/3;
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+    color:  rgba(0, 0, 0, 0.35);
+ 
+}
+.access{
+  grid-column: 1/3;
+}
+
+
 @media (max-width: 400px) {
-  .heroSection {
+  .heroSection, .main {
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -354,7 +388,7 @@
   .landingNav a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .logIn a {
     background: #ffda7f;
@@ -382,11 +416,42 @@
     align-items: center;
   }
   
+
+  .mostOrderedDish .modHeader h2{
+    font-size: 2rem;
+  }
   .filterContainer {
     flex-direction: row;
     justify-content: flex-end;
     width: 54.4rem;
+   display: flex;
+   align-items: center;
   }
+  .clients{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(10rem, auto);
+ padding: 0 7rem;
+}
+.clients img{
+  max-width: 120px;
+  justify-self: center;
+  align-self: center;
+  width: 20rem;
+}
+.clients .clientsHeading{
+  grid-column: 1/6;
+  font-size: 2rem;
+     letter-spacing: 0.7rem;
+}
+
+.access{
+  grid-column: 5;
+}
+.searchInput{
+  margin-right: 2rem;
+}
+
 
 }
 
@@ -396,7 +461,7 @@
     display: block;
   }
 
-  .heroSection {
+  .heroSection, .main{
     position: relative;
     padding-left: 135px;
     padding-right: 60px;
@@ -448,10 +513,41 @@
   .address {
     margin-top: 60px;
   }
+  .clients{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(12rem, auto);
+ padding: 0 7rem;
+}
+
+.clients img{
+  max-width: 250px;
+  justify-self: center;
+  align-self: center;
+  width: 20rem;
+}
+
+.clients .clientsHeading{
+    grid-column: 1/6;
+    justify-self: center;
+    align-self: flex-end;
+    
+    color:  rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.7rem;
+}
+
+.access{
+  grid-column: 5;
+}
+
 }
 
 @media (min-width: 576px) {
   .menuToggle i {
     background-color: #fff;
   }
+  .clients img{
+    width: 9.7rem;
+  }
+
 }

@@ -76,8 +76,8 @@ const Landing = () => {
         </div>
         <div className={styles.heroContent}>
           <div>
-            <h1>{"Hungry? You're "}</h1>
-            <h1>{"in the right place"}</h1>
+            <h1 className={styles.heroCaption}>{"Hungry? You're "}</h1>
+            <h1 className={styles.heroCaption}>{"in the right place"}</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
             <div className={styles.address}>
@@ -130,15 +130,14 @@ const Landing = () => {
       <div id="main" className={styles.main}>
         <div className={styles.mostOrderedDish}>
           <div className={styles.modHeader}>
-            <h2>Most Ordered Meals</h2>
+            <h2 style={{ fontSize: "2rem" }}>Most Ordered Meals</h2>
           </div>
           {data && <MostOrderedMeals />}
         </div>
         <div className={styles.allDishes}>
           <div className={styles.allDishesHeader}>
-            <h3>Our Dishes</h3>
+            <h3 style={{ fontSize: "2rem" }}>Our Dishes</h3>
             <div className={styles.filterContainer}>
-
               <input
                 type="text"
                 name="dishes"
@@ -147,13 +146,34 @@ const Landing = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className={styles.searchInput}
               />
-             
-              <DropDownFilter category={category} setCategory={setCategory} dishes={data}/>
+
+              <DropDownFilter
+                category={category}
+                setCategory={setCategory}
+                dishes={data}
+              />
             </div>
           </div>
-          {data && <AllDishesList category={category} setCategory={setCategory} dishes={data} searchTerm={searchTerm} />}
+          {data && (
+            <AllDishesList
+              category={category}
+              setCategory={setCategory}
+              dishes={data}
+              searchTerm={searchTerm}
+            />
+          )}
           {isPending && <h3>Loading</h3>}
         </div>
+      </div>
+      <div className={styles.clients}>
+        <h3 className={styles.clientsHeading}>
+          Trusted by the following brands
+        </h3>
+        <img className={styles.stutern} src="/assets/Stutern.png" />
+        <img className={styles.paystack} src="/assets/Paystack.png" />
+        <img className={styles.microsoft} src="/assets/Microsoft.png" />
+        <img className={styles.sahara} src="/assets/Sahara.png" />
+        <img className={styles.access} src="/assets/Access.png" />
       </div>
       <Footer />
     </div>

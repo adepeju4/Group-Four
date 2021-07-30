@@ -29,7 +29,7 @@ export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => 
         .filter(filterByCategory)
         .map((dish) => (
           <div className={styles.dishContainer} key={dish.id}>
-            <Link to="#" className={styles.dishContainer}>
+            <Link to={`/dishes/${dish.id}`}className={styles.dishContainer}>
               <div className={styles.dishesImage}>
                 <img src={dish.image} />
               </div>
@@ -54,7 +54,7 @@ export const MostOrderedMeals = () => {
         console.log(dish)
          return (
            <div className={styles.dishContainer} key={dish.id}>
-             <Link>
+             <Link to={`/dishes/${dish.id}`}>
                <div className={styles.dishesImage}>
                  <img src={dish.image} />
                </div>
