@@ -10,6 +10,10 @@ import Product from "./Product.js"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
+
+  // const userLogin = useSelector((state) => state.userLogin)
+  // const {user} = userLogin
+
   return (
     <div className="App">
       <BrowserRouter>
