@@ -1,31 +1,33 @@
 /* eslint-disable no-unused-vars */
 import styles from "./stylesheets/landing.module.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "./redux/action/productsAction";
+
 import {
   LightVariantCart,
   Circle,
   RightPlate,
   LeftPlate,
 } from "./Components/Icons";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import Footer from "./Components/Footer";
 
 import { AllDishesList, MostOrderedMeals } from "./Components/DishesList";
-import useAxios from "./Hooks/useAxios";
 import DropDownFilter from "./Components/Dropdown";
-
-
+import { useEffect } from "react";
 
 const Landing = () => {
+  const dispatch = useDispatch();
+  const { data, error, pending } = useSelector((state) => state.products)
   const [status, setStatus] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-
   const [category, setCategory] = useState("");
 
-
-  const { data, isPending, error } = useAxios("http://localhost:8000/dishes");
-
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [])
   return (
     <div className={styles.landing}>
       <div className={styles.heroSection}>
@@ -162,7 +164,7 @@ const Landing = () => {
               searchTerm={searchTerm}
             />
           )}
-          {isPending && <h3>Loading</h3>}
+          {pending && <h3>Loading</h3>}
         </div>
       </div>
       <div className={styles.clients}>
