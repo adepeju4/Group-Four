@@ -3,6 +3,7 @@ import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
 import Checkout from "./Checkout.js";
+import About from "./About.js";
 // import Footer from "./Components/Footer.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -33,6 +34,10 @@ function App() {
 
             <Route path="/checkout">
               <Checkout />
+            </Route>
+            
+            <Route path="/about">
+              <About />
             </Route>
           </Switch>
         </div>

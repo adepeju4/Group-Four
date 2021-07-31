@@ -1,6 +1,7 @@
 import TopBar from "./Components/Navbar/TopBar";
 import Footer from "./Components/Footer";
 import styles from "./stylesheets/cart.module.css";
+
 const Cart = () => {
   return (
     <>
