@@ -8,18 +8,18 @@ jobs:
             - checkout
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "package-lock.json" }}-v1
+                      - v1-dependencies-{{ checksum "yarn.lock" }}-v1
                       # fallback to using the latest cache if no exact match is found
                       - v1-dependencies-v1
             - run: yarn install
             - save_cache:
                   paths:
                       - node_modules
-                  key: v1-dependencies-{{ checksum "package-lock.json" }}-v1
+                  key: v1-dependencies-{{ checksum "yarn.lock" }}-v1
            
             - run:
                   name: Testing
-                  command: yarn run test -- --ci
+                  command: yarn run test
                   environment:
                       JEST_JUNIT_OUTPUT_DIR: junit
             - store_test_results:
