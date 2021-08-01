@@ -19,7 +19,7 @@ jobs:
            
             - run:
                   name: Testing
-                  command: yarn run test
+                  command: yarn run test -- --collectCoverage --watchAll=false
                   environment:
                       JEST_JUNIT_OUTPUT_DIR: junit
             - store_test_results:
