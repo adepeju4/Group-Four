@@ -1,0 +1,5 @@
+export const productTypes = {
+  SET_PRODUCT: "SET_PRODUCT",
+  SET_PENDING: "SET_PRODUCT_PENDING",
+  SET_ERROR: "SET_PRODUCT_ERROR",
+};
