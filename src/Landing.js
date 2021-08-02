@@ -33,36 +33,6 @@ const Landing = () => {
       <div className={styles.heroSection}>
         <Circle className={styles.circle} />
         <div className={styles.navigation}>
-          <div className={styles.logo}>
-            <Link to="/">foodine</Link>
-          </div>
-          <div className={styles.mobileContainer}>
-            <div id={status ? styles.mobileNav : ""}>
-              <ul className={styles.landingNav}>
-                <li>
-                  <p>foodine</p>
-                </li>
-                <li className={styles.navLinks}>
-                  <Link to="/cart">
-                    <LightVariantCart landing={true} />
-                    <p className={styles.cartText}>Cart</p>
-                  </Link>
-                </li>
-                <li className={styles.navLinks}>
-                  <Link to="/about">About</Link>
-                </li>
-                <li className={styles.navLinks}>
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li className={[styles.signUp]}>
-                  <Link to="/signup">Sign Up</Link>
-                </li>
-                <li className={[styles.logIn]}>
-                  <Link to="/login">Log In</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div
             className={status ? styles.menuMask : ""}
             onClick={() => setStatus(false)}

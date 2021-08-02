@@ -4,8 +4,7 @@ import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
 import Checkout from "./Checkout.js";
 import Product from "./Product.js"
-
-// import Footer from "./Components/Footer.js";
+import { Navigation } from './Components/Navigation';
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -17,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* insert navbar here */}
+        <Navigation />
 
         <div className="content">
           <Switch>
