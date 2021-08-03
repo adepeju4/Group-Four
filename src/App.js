@@ -2,9 +2,8 @@ import Landing from "./Landing.js";
 import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
-import Product from "./Product.js";
-
-// import Footer from "./Components/Footer.js";
+import Product from "./Product.js"
+import { Navigation } from './Components/Navigation';
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* insert navbar here */}
+        <Navigation />
 
         <div className="content">
           <Switch>
