@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import Footer from "./Components/Footer";
+import { Link } from 'react-router-dom';
 
 import { AiOutlineStar, AiOutlineHeart } from "react-icons/ai";
 import TopBar from "./Components/Navbar/TopBar";
@@ -37,7 +38,9 @@ const Product = () => {
                   }
                 </div>
                 <p>{dish.description}</p>
+                <Link to="/cart">
                 <button className={styles.cta}>Add To Cart</button>
+                </Link>
               </div>
               <div className={styles.productMedia}>
                 <div className={styles.productImage}>

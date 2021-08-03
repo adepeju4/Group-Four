@@ -2,14 +2,13 @@ import Landing from "./Landing.js";
 import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
-import Checkout from "./Checkout.js";
-import Product from "./Product.js"
+import Product from "./Product.js";
 
 // import Footer from "./Components/Footer.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
+const App = () => {
 
   // const userLogin = useSelector((state) => state.userLogin)
   // const {user} = userLogin
@@ -38,10 +37,6 @@ function App() {
             </Route>
             <Route path="/cart">
               <Cart />
-            </Route>
-
-            <Route path="/checkout">
-              <Checkout />
             </Route>
           </Switch>
         </div>
