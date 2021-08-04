@@ -6,28 +6,48 @@
 }
 
 .image-container {
-  width: 40%;
+  width: 35%;
   height: 100vh;
+  position: relative;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.image-container .logo {
+  position: absolute;
+  margin: 0 auto;
+  top: 20%;
+  z-index: 999;
+  text-align: center;
+  width: 100%;
+}
+
+.logo p {
+  color: #fff;
+  cursor: default;  
 }
 
 .img {
   width: 100%;
   height: 100vh;
+  
 }
 
 .form {
-  width: 60%;
+  width: 65%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../asset/restaurant.png");
+  /* background-image: url("../asset/restaurant.png"); */
   background-repeat: no-repeat;
 }
 
 .form-control {
-  margin-bottom: 1.8rem;
+  margin: 1.8rem 0;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -62,19 +82,37 @@
 }
 
 @media only screen and (max-width: 550px) {
-  .image-container {
-    display: none;
+  .login-page{
+  height: 90vh;
+  display: block;
   }
 
+  .image-container {
+    display: block;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 20vh;
+  }
+  
   .img {
-    display: none;
+    height: 100%;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   .form {
     width: 100%;
+    height: 50vh;
+    margin: 3.5em 0;
   }
 
   .form-control {
+    margin: 1.8rem 0;
     width: 80%;
   }
 }

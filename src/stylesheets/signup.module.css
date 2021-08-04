@@ -3,16 +3,15 @@
 }
 .first {
   /* position: relative; */
-  height: 110vh;
-
+  height: 100vh;
   display: inline-block;
   width: 35%;
   overflow: hidden;
-  margin-bottom: -0.438rem;
+  margin-bottom: -0.49rem;
 }
 
 .image {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -30,7 +29,7 @@
 }
 
 .logo {
-  font-size: 1.813rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .image .logo {
@@ -48,15 +47,15 @@
 }
 
 .second {
-  height: 110vh;
+  height: 100vh;
   display: inline-block;
   width: 65%;
   overflow: hidden;
-  margin-bottom: -0.438rem;
+  margin-bottom: -0.439rem;
 }
 
 .details {
-  margin: 22% auto;
+  margin: 12% auto;
   width: 60%;
   text-align: center;
   padding: 20px 0;
@@ -141,7 +140,7 @@
 }
 
 .inputName {
-  height: 2.5rem;
+  height: 3.2rem;
   width: 100%;
   border-radius: 0.313rem;
   outline: none;
@@ -150,7 +149,7 @@
 }
 
 .inputEmail {
-  height: 2.5rem;
+  height: 3.2rem;
   width: 100%;
   border-radius: 0.313rem;
   outline: none;
@@ -159,7 +158,7 @@
 }
 
 .inputPassword {
-  height: 2.5rem;
+  height: 3.2rem;
   width: 100%;
   border-radius: 0.313rem;
   outline: none;
@@ -168,7 +167,7 @@
 }
 
 .inputConfirmPassword {
-  height: 2.5rem;
+  height: 3.2rem;
   width: 100%;
   border-radius: 0.313rem;
   outline: none;
@@ -177,7 +176,7 @@
 }
 
 .section0 {
-  margin: 0.313rem 0;
+  margin: 0.7rem 0;
 }
 
 .section0 > .name > span{
@@ -186,7 +185,7 @@
 }
 
 .section1 {
-  margin: 0.313rem 0;
+  margin: 0.7rem 0;
 }
 
 .section1 > .email> span{
@@ -195,7 +194,7 @@
 }
 
 .section2 {
-  margin: 0.313rem 0;
+  margin: 0.7rem 0;
 }
 
 .section2 > .password > span{
@@ -203,7 +202,7 @@
   color: red;
 }
 .section3 {
-  margin: 0.313rem 0;
+  margin: 0.7rem 0;
 }
 
 .section3 > .confirmPassword > span{
@@ -227,7 +226,7 @@
   color: #fff;
   width: 100%;
   cursor: pointer;
-  height: 2.5rem;
+  height: 3rem;
 }
 
 .btn2 {
@@ -239,7 +238,7 @@
   position: absolute;
   top: 72%;
   right: 5%;
-  height: 8.125rem;
+  height: 10rem;
   transform: rotate(-12deg);
 }
 
@@ -247,7 +246,7 @@
   position: absolute;
   top: 5%;
   right: 50%;
-  height: 8.125rem;
+  height: 10rem;
   transform: rotate(40deg);
 }
 
@@ -316,7 +315,7 @@
     position: absolute;
     top: 85%;
     right: 4%;
-    height: 5rem;
+    height: 10rem;
     transform: rotate(-12deg);
   }
   
@@ -324,14 +323,14 @@
     position: absolute;
     top: 12%;
     right: 54%;
-    height: 5rem;
+    height: 10rem;
     transform: rotate(40deg);
   }
 }
 
 @media (min-width: 960px) and (max-width: 1400px) {
   .details {
-      margin: 18% auto;
+      margin: 14% auto;
       width: 60%;
     }
 
@@ -421,7 +420,7 @@
       position: absolute;
       top: 85%;
       right: 4%;
-      height: 5rem;
+      height: 10rem;
       transform: rotate(-12deg);
     }
     
@@ -429,14 +428,14 @@
       position: absolute;
       top: 12%;
       right: 54%;
-      height: 5rem;
+      height: 10rem;
       transform: rotate(40deg);
     }
 }
 
 @media (min-width: 750px) and (max-width: 960px) {
   .details {
-      margin: 20% auto;
+      margin: 15% auto;
       width: 75%;
     }
   
@@ -472,13 +471,13 @@
     .restaurant {
       top: 85%;
       right: 4%;
-      height: 5rem;
+      height: 7.5rem;
     }
     
     .restaurant2 {
       top: 12%;
       right: 54%;
-      height: 5rem;
+      height: 7.5rem;
     }
     .section4 {
       margin: 2.5rem 0;
@@ -515,22 +514,35 @@
     }
     
     .restaurant2 {
-      top: 10%;
-      right: 54%;
+      top: 20%;
+      right: 56%;
       height: 3.75rem;
     }
 
     .logo {
-      font-size: 1.813rem;
+      font-size: 2rem;
     }
     .inputConfirmPassword {
       font-size: 1.2rem;
       width: 100%;
     }
+    .section4 > button{
+      font-size: 1.2rem;
+    }
 
 }
 
 @media (min-width: 500px) and (max-width: 550px) {
+  .first {
+  height: 100vh;
+  display: inline-block;
+  width: 40%;
+  overflow: hidden;
+  margin-bottom: -0.5rem;
+  }
+  .second{
+    width: 60%;
+  }
   .googlebutton {
     margin: 0.563rem 0;
   }  
@@ -557,8 +569,8 @@
   }
   
   .restaurant2 {
-    top: 10%;
-    right: 54%;
+    top: 20%;
+    right: 53%;
     height: 3.75rem;
   }
 
@@ -579,6 +591,9 @@
   }
   .section4{
     margin: 2.5rem 0;
+  }
+  .section4 > button{
+    font-size: 1.2rem;
   }
   .inputName {
     font-size: 1.2rem;
@@ -606,7 +621,7 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -0.438rem;
+    margin-bottom: -0.49rem;
     height: 20vh;
   }
   .image .img2{
@@ -716,9 +731,12 @@
   .section4 {
     margin: 1.25rem 0;
   }  
+  .section4 > button{
+    font-size: 1.2rem;
+  }
 }
-
-@media (min-width: 280px) and (max-width: 350px) {
+ 
+@media only screen and (max-width: 350px) {
   .img {
     width: 100%;
     height: 30%;
@@ -727,7 +745,7 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -0.438rem;
+    margin-bottom: -0.49rem;
     height: 20vh;
   }
   .image .img2{
@@ -837,4 +855,7 @@
   .section4 {
     margin: 1.25rem 0;
   }  
+  .section4 > button{
+    font-size: 1.2rem;
+  }
 }

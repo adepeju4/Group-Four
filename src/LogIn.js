@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from './redux/action/userAction'
-
+import Footer from './Components/Footer.js'
 
 import styles from './stylesheets/login.module.css'
 
@@ -32,9 +32,13 @@ const LogIn = () => {
   };
 
   return (
+    <div>
     <div className={styles["login-page"]}>
       <div className={styles["image-container"]}>
-        <img className={styles.img} src="/assets/Hamburger-SignUp.jpg" />
+      <img className={styles['img']} src="/assets/Hamburger-SignUp.jpg" />
+      <div className={styles['logo']}>
+            <p>foodine</p>
+        </div>
       </div>
       <form className={styles.form} onSubmit={handleSubmit}>
         <h2>Sign In</h2>
@@ -64,6 +68,8 @@ const LogIn = () => {
           <button type="submit">Login</button>
         </div>
       </form>
+    </div>
+    <Footer/>
     </div>
   );
 };
