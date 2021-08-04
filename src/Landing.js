@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "./redux/action/productsAction";
 
 import {
-  LightVariantCart,
   Circle,
   RightPlate,
   LeftPlate,
@@ -33,7 +32,7 @@ const Landing = () => {
       <div className={styles.heroSection}>
         <Circle className={styles.circle} />
         <div className={styles.navigation}>
-          <div
+          {/* <div
             className={status ? styles.menuMask : ""}
             onClick={() => setStatus(false)}
           ></div>
@@ -44,7 +43,7 @@ const Landing = () => {
             <i className={status ? styles.open : styles.close}></i>
             <i className={status ? styles.open : styles.close}></i>
             <i className={status ? styles.open : styles.close}></i>
-          </button>
+          </button> */}
         </div>
         <div className={styles.heroContent}>
           <div>
