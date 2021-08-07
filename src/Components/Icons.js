@@ -20,7 +20,7 @@ export const LightVariantCart = ({ landing }) => {
         cx="52.5"
         cy="14.5"
         r="13.5"
-        fill="#171616"
+        fill="#000"
         stroke="white"
         // eslint-disable-next-line react/no-unknown-property
         strokeWidth="2"
@@ -82,7 +82,7 @@ export const Circle = (props) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="426" cy="165" r="562" fill="#171616" />
+      <circle cx="426" cy="165" r="562" fill="#000" />
     </svg>
   );
 };
@@ -103,7 +103,6 @@ export const ArrowLeft = (props) => {
   );
 };
 
-
 export const dropDownArrow = () => {
   return (
     <svg
@@ -122,7 +121,7 @@ export const dropDownArrow = () => {
       />
     </svg>
   );
-}
+};
 
 export const DarkRating = () => {
   return (
@@ -139,7 +138,7 @@ export const DarkRating = () => {
       />
     </svg>
   );
-}
+};
 
 export const LightRating = () => {
   return (
@@ -157,7 +156,7 @@ export const LightRating = () => {
       />
     </svg>
   );
-}
+};
 
 export const Heart = () => {
   return (
@@ -166,8 +165,7 @@ export const Heart = () => {
         d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
 	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
         stroke="black"
-        
       />
     </svg>
   );
-}
+};

@@ -1,92 +1,48 @@
-import { useParams } from "react-router";
+import MealScreen from "./MealScreen";
 import { useDispatch, useSelector } from "react-redux";
-
-import { getProduct } from "./redux/action/productsAction";
-import Footer from "./Components/Footer";
-
-import { AiOutlineStar } from "react-icons/ai";
-import TopBar from "./Components/Navbar/TopBar";
-
-
-import styles from "./stylesheets/product.module.css"
-import iconStyles from './stylesheets/icons.module.css'
-
-import { useEffect, useState } from "react";
-import { Heart } from "./Components/Icons";
+import { getProductAsync } from "./redux/action/productsAction";
+import { useEffect } from "react";
+import { useParams } from "react-router";
+import styles from "./stylesheets/product.module.css";
+import { Spinner } from "react-bootstrap";
 
 
 const Product = () => {
-  const rating = [1, 2, 3, 4, 5];
-  
-  const [active, setActive] = useState(false)
+
+
+
   const dispatch = useDispatch();
-  const { id } = useParams();
-  const { data: dish, pending: isPending } = useSelector((state) => state.product);
-  useEffect(() => {
-    dispatch(getProduct({ id }));
-  }, [id])
+   const { id } = useParams();
+   
+  const { data: dish, reviews, pending: isPending } = useSelector(
+    (state) => state.product
+  );
+
+
   
+  useEffect(() => {
+    dispatch(getProductAsync(id));
+  }, [id]);
+ 
+  
+
   return (
     <>
       <div className={styles.productBody}>
-        <TopBar />
-        {isPending && <center>Loading</center>}
+        {isPending && (
+          <>
+            <div className={styles.pending}>
+              <Spinner animation="grow" />
+              Loading
+            </div>
+          </>
+        )}
         {dish && (
           <>
-            <section className={styles.productPreview}>
-              <div className={styles.productInfo}>
-                <h1>{dish.name}</h1>
-                <h3>Extra Large</h3>
-                <h3>N{dish.price}</h3>
-                <div className={styles.rating}>
-                  {rating.map((rate, i) => {
-                    return (
-                      <AiOutlineStar
-                        className={styles.ratingIcon}
-                        key={`rate${i}`}
-                      />
-                    );
-                  })}
-                </div>
-                <p>{dish.description}</p>
-                <button className={styles.cta}>Add To Cart</button>
-              </div>
-              <div className={styles.productMedia}>
-                <div className={styles.productImage}>
-                  <img src={dish.image} />
-                </div>
-           
-                <div
-                  className={active && iconStyles.active}
-                  onClick={() => setActive(!active)}
-                  style={{display:"flex", alignSelf:"flex-end"}}
-                >
-                  <Heart />
-                 
-                </div>
-
-                <div className={styles.shareProduct}>
-                  <h3>SHARE</h3>
-                  <div className={styles.socials}>
-                    <img src="/assets/shareFacebook.png"/>
-                  <img src="/assets/shareTwitter.png"/>
-                  </div>
-                  
-                </div>
-              </div>
-            </section>
-            <section className={styles.productReviews}>
-              <h2 className={styles.reviewHeading}>
-                Meal Reviews
-              </h2>
-              <div className={styles.reviewContainer}>
-                
-              </div>
-            </section>
+            <MealScreen dish={dish} dishId={id} reviews={reviews} />
           </>
         )}
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,14 +1,13 @@
-import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
-import { login } from './redux/action/userAction'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "./redux/action/userAction";
+import { useHistory } from 'react-router-dom';
 
-
-import styles from './stylesheets/login.module.css'
+import styles from "./stylesheets/login.module.css";
 
 const LogIn = () => {
-
   const dispatch = useDispatch();
-
+  const history = useHistory();
   const [signinData, setsigninData] = useState({
     email: "",
     password: "",
@@ -27,8 +26,7 @@ const LogIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(login(email, password))
-
+    dispatch(login(email, password, history));
   };
 
   return (
@@ -61,6 +59,7 @@ const LogIn = () => {
           />
         </div>
         <div className={styles["form-control"]}>
+          
           <button type="submit">Login</button>
         </div>
       </form>
