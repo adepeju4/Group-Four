@@ -28,13 +28,18 @@
   line-height: 63px;
   letter-spacing: 0.02em;
   margin-right: auto;
+  color: #fff;
 }
+
 
 .navigation {
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 4rem;
+  padding: 1rem 5rem;
+  background: #000;
+  border: 1px solid #000;
+  /* z-index: 1; */
 }
 
 .landingNav {
@@ -59,8 +64,9 @@
 }
 
 .logo a {
-  color: #000;
+  color: #fff;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .cart {
@@ -87,7 +93,8 @@
 }
 
 .foodImg {
-  display: none;
+  display: flex;
+  width: 45rem;
 }
 
 .input {
@@ -112,10 +119,11 @@
   width: 100%;
 }
 .heroContent {
-  margin-top: 20px;
+  
   height: 70vh;
   display: flex;
   align-items: center;
+  flex-direction: column-reverse;
 }
 
 .heroContent .heroCaption{
@@ -149,7 +157,7 @@
 }
 
 .menuToggle i {
-  background-color: #000;
+  background-color: #fff;
   width: 3.2rem;
   height: 0.4rem;
   margin: 0.4rem;
@@ -246,7 +254,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-
+  /* z-index: 1; */
   opacity: 0.3;
   top: 0;
   left: 0;
@@ -356,12 +364,20 @@ justify-content: center;
   grid-column: 1/3;
 }
 
+.pending{
+  background: #fff;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
 
 @media (max-width: 400px) {
   .heroSection, .main {
     padding-left: 25px;
     padding-right: 25px;
   }
+  
 }
 @media (min-width: 767px) {
   .landingNav {
@@ -369,7 +385,7 @@ justify-content: center;
   }
 
   .heroContent {
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
   }
@@ -451,7 +467,12 @@ justify-content: center;
 .searchInput{
   margin-right: 2rem;
 }
+.foodImg {
+  display: flex !important;
+  margin-left: -12rem;
+  width: 500px;
 
+}
 
 }
 
@@ -469,7 +490,7 @@ justify-content: center;
   }
   .heroContent {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
   }
@@ -549,5 +570,7 @@ justify-content: center;
   .clients img{
     width: 9.7rem;
   }
-
+.foodImg {
+  display: none;
+}
 }

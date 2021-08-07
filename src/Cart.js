@@ -1,5 +1,3 @@
-import TopBar from "./Components/Navbar/TopBar";
-import Footer from "./Components/Footer";
 import styles from "./stylesheets/cart.module.css";
 import CartDish from "./Components/CartDish";
 
@@ -25,7 +23,6 @@ const Cart = () => {
         </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

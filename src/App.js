@@ -5,18 +5,25 @@ import Cart from "./Cart.js";
 import Product from "./Product.js"
 
 // import Footer from "./Components/Footer.js";
+import Checkout from "./Checkout.js";
+import Product from "./Product.js";
+// import { Navigation } from "./Components/Navigation";
+import NavBar from "./Components/Navbar/NavBar.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Footer from "./Components/Footer.js";
+import ScrollToTop from "./Components/ScrollToTop.js";
 
 function App() {
-
   // const userLogin = useSelector((state) => state.userLogin)
   // const {user} = userLogin
 
   return (
     <div className="App">
       <BrowserRouter>
-        {/* insert navbar here */}
+
+            <ScrollToTop/>
+        <NavBar />
 
         <div className="content">
           <Switch>
@@ -40,6 +47,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+      <Footer/>
       </BrowserRouter>
     </div>
   );

@@ -1,50 +1,66 @@
 import axios from "axios";
-import { productsTypes, productTypes } from "../type";
+import baseUrl from "../../utils/BaseUrl";
 
-export const getProducts = (data) => async (dispatch) => {
-  dispatch({ type: productsTypes.SET_PENDING, pending: true });
+import { productsTypes, productTypes, reviewsTypes } from "../type";
+
+
+const getProducts = (data) => {
+  return {
+    type: productsTypes.SET_PRODUCTS,
+    data: data
+  }
+}
+const getProduct = (data) => {
+  return {
+    type: productTypes.SET_PRODUCT,
+    data: data
+  };
+};
+
+const createReview = (data) => {
+  return {
+    type: reviewsTypes.SET_REVIEW,
+    data: data
+  }
+}
+
+export const getProductsAsync = () => async (dispatch) => {
   try {
-         return axios({
-           method: "get",
-           url: "http://localhost:8000/dishes",
-           params: data,
-         }).then((res) => {
-           if (res?.data?.length) {
-             //TODO
-             dispatch({ type: productsTypes.SET_PRODUCTS, data: res.data });
-           } else {
-             dispatch({
-               type: productsTypes.SET_ERROR,
-               error: `Couldn't fetch products`,
-             }); //TODO
-           }
-         });
+    let res = await axios.get(`${baseUrl}/dishes/list`);
+    
+    console.log(res, "response")
+
+    console.log(baseUrl, "base url")
+    dispatch(getProducts(res.data.dishes));
+    
   } catch (err) {
-      dispatch({ type: productsTypes.SET_ERROR, error: err.message || `Couldn't fetch products` }); //TODO
+    console.log(err);
   }
 };
 
-export const getProduct = (data) => async (dispatch) => {
-  // dispatch({ type: productTypes.SET_PENDING, pending: true });
+
+export const getProductAsync = ( id) => async (dispatch) => {
   try {
-    return axios({
-      method: "get",
-      url: "http://localhost:8000/dishes",
-      params: data,
-    }).then((res) => {
-      if (res?.data?.[0]) {
-        dispatch({ type: productTypes.SET_PRODUCT, data: res.data[0] });
-      } else {
-        dispatch({
-          type: productTypes.SET_ERROR,
-          error: `Product not found`,
-        }); //TODO
-      }
-    });
+    let res = await axios.get(`${baseUrl}/dishes/${id}`);
+    console.log(res, "response");
+
+    console.log(baseUrl, "base url");
+   dispatch(getProduct(res.data.data));
   } catch (err) {
-    dispatch({
-      type: productTypes.SET_ERROR,
-      error: `Product not found`,
-    }); //TODO
+    console.log(err)
+  }
+};
+
+export const createReviewAsync = (data) => async (dispatch) => {
+  const {dishId} = data
+  try {
+    let res = await axios.post(`${baseUrl}/dishes/${dishId}/reviews`, data);
+     console.log(res, "response");
+
+     console.log(baseUrl, "base url");
+    dispatch(createReview(res.data.data))
+    
+  } catch (err) {
+    console.log(err.message)
   }
 }

@@ -1,38 +1,60 @@
-import { useParams } from "react-router";
+import MealScreen from "./MealScreen";
 import { useDispatch, useSelector } from "react-redux";
+import { getProductAsync } from "./redux/action/productsAction";
+import { useEffect } from "react";
+import { useParams } from "react-router";
+import styles from "./stylesheets/product.module.css";
+import { Spinner } from "react-bootstrap";
 
+<<<<<<< HEAD
 import { getProduct } from "./redux/action/productsAction";
 import Footer from "./Components/Footer";
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> 898be4c637e9ae3396844b33a3aae93d686882a3
 
-import { AiOutlineStar } from "react-icons/ai";
-import TopBar from "./Components/Navbar/TopBar";
-
-
-import styles from "./stylesheets/product.module.css"
-import iconStyles from './stylesheets/icons.module.css'
-
-import { useEffect, useState } from "react";
-import { Heart } from "./Components/Icons";
+const Product = () => {
 
 
+
+  const dispatch = useDispatch();
+   const { id } = useParams();
+   
+  const { data: dish, reviews, pending: isPending } = useSelector(
+    (state) => state.product
+  );
+
+
+<<<<<<< HEAD
 const Product = () => {
   const rating = [1, 2, 3, 4, 5];
   const [active, setActive] = useState(false)
   const dispatch = useDispatch();
   const { id } = useParams();
   const { data: dish, pending: isPending } = useSelector((state) => state.product);
-  useEffect(() => {
-    dispatch(getProduct({ id }));
-  }, [id])
+=======
   
+>>>>>>> 898be4c637e9ae3396844b33a3aae93d686882a3
+  useEffect(() => {
+    dispatch(getProductAsync(id));
+  }, [id]);
+ 
+  
+
   return (
     <>
       <div className={styles.productBody}>
-        <TopBar />
-        {isPending && <center>Loading</center>}
+        {isPending && (
+          <>
+            <div className={styles.pending}>
+              <Spinner animation="grow" />
+              Loading
+            </div>
+          </>
+        )}
         {dish && (
           <>
+<<<<<<< HEAD
             <section className={styles.productPreview}>
               <div className={styles.productInfo}>
                 <h1>{dish.name}</h1>
@@ -85,10 +107,12 @@ const Product = () => {
                 
               </div>
             </section>
+=======
+            <MealScreen dish={dish} dishId={id} reviews={reviews} />
+>>>>>>> 898be4c637e9ae3396844b33a3aae93d686882a3
           </>
         )}
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,15 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import styles from "../stylesheets/dropdown.module.css"
+import styles from "../stylesheets/dropdown.module.css";
 
 const DropDownFilter = ({ dishes, category, setCategory }) => {
-
   const handleFilterChange = (event) => {
-    const {value} = event.target;
+    const { value } = event.target;
 
     setCategory(value);
-  }
+  };
 
   return (
     <div className={styles.select}>
@@ -18,7 +17,7 @@ const DropDownFilter = ({ dishes, category, setCategory }) => {
         value={category}
         id="category"
         onChange={handleFilterChange}
-      > 
+      >
         <option value="">Sort By</option>
         <option value="seafood">Seafood</option>
         <option value="vegetables">Vegetables</option>
@@ -27,6 +26,6 @@ const DropDownFilter = ({ dishes, category, setCategory }) => {
       </select>
     </div>
   );
-}
- 
+};
+
 export default DropDownFilter;
