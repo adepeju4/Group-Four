@@ -18,7 +18,6 @@ import { Heart } from "./Components/Icons";
 
 const Product = () => {
   const rating = [1, 2, 3, 4, 5];
-  
   const [active, setActive] = useState(false)
   const dispatch = useDispatch();
   const { id } = useParams();

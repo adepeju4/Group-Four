@@ -1,15 +1,26 @@
 import styles from "../stylesheets/counter.module.css";
+// import { getProducts, getProduct } from "../redux/action/productsAction";
 import { useState} from 'react';
 
 const Counter = () => {
     const [ count, setCount ] = useState(0)
 
     const handleIncrement = () => {
-        setCount(prevCount => prevCount + 1)
+         setCount({
+            count: this.state.count + 1
+        });
     };
 
     const handleDecrement = () => {
-        setCount(prevCount => prevCount - 1) 
+        if(this.state.count< 1){
+            setCount({
+              count:0
+            });
+          }else {
+            setCount({
+              count: this.state.count- 1
+            });
+          }
     };
     return(
         <div className = { styles.counter}>

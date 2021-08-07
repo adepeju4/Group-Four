@@ -1,8 +1,9 @@
-import {cartTypes} from '../type';
+import {cartTypes} from '../type/cartTypes';
 import axios from 'axios';
 
 export const addToCart = (id, qty ) => async (dispatch, getState) => {
-    const { data } = await axios.get(`/dish/${id}`);
+    const url = 'http://localhost:8000/';
+    const { data } = await axios.get(`${url}dishes`);
 
     dispatch ({
         type: cartTypes.ADD_TO_CART,
@@ -11,7 +12,6 @@ export const addToCart = (id, qty ) => async (dispatch, getState) => {
             name: data.dish.name,
             image: data.dish.image,
             price: data.dish.price,
-            size: data.dish.size,
             countInStock: data.dish.countInStock,
             qty
         },

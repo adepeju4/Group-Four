@@ -3,11 +3,12 @@ import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
 import Product from "./Product.js"
-import { Navigation } from './Components/Navigation';
+
+// import Footer from "./Components/Footer.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-const App = () => {
+function App() {
 
   // const userLogin = useSelector((state) => state.userLogin)
   // const {user} = userLogin
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navigation />
+        {/* insert navbar here */}
 
         <div className="content">
           <Switch>

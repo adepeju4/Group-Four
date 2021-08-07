@@ -12,7 +12,6 @@ const Cart = () => {
         <div className = { styles.cartscreen}>
           <div className = {styles.cartscreen_left}>    
             <CartDish />
-            <CartDish />
           </div>
           <div className = {styles.cartscreen_right}>
           <div>
