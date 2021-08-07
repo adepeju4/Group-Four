@@ -13,7 +13,7 @@ const initForm = {
 
 const reviewForm = ({ dishId }) => {
   const dispatch = useDispatch();
-  const [isPending, setIsPending] = useState(false);
+  // const [isPending, setIsPending] = useState(false);
   const [form, setForm] = useState(initForm);
 
   const handleSubmit = (e) => {
