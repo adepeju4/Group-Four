@@ -2,7 +2,6 @@ import Landing from "./Landing.js";
 import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
 import Cart from "./Cart.js";
-import Checkout from "./Checkout.js";
 import Product from "./Product.js";
 import HelmetMetaData from "./Components/HelmetMetaData";
 
@@ -39,10 +38,6 @@ function App() {
             </Route>
             <Route path="/cart">
               <Cart />
-            </Route>
-
-            <Route path="/checkout">
-              <Checkout />
             </Route>
           </Switch>
         </div>
