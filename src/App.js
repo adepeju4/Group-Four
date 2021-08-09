@@ -5,9 +5,6 @@ import Cart from "./Cart.js";
 import Product from "./Product.js"
 
 // import Footer from "./Components/Footer.js";
-import Checkout from "./Checkout.js";
-import Product from "./Product.js";
-// import { Navigation } from "./Components/Navigation";
 import NavBar from "./Components/Navbar/NavBar.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";

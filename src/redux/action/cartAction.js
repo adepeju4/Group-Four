@@ -1,28 +1,33 @@
 import {cartTypes} from '../type/cartTypes';
-import axios from 'axios';
+import axios from "axios";
+import baseUrl from "../../utils/BaseUrl";
 
-export const addToCart = (id, qty ) => async (dispatch, getState) => {
-    const url = 'http://localhost:8000/';
-    const { data } = await axios.get(`${url}dishes`);
 
-    dispatch ({
+export const addToCart = (_id) => async (dispatch) => {
+    const {data } = await axios.get(`${baseUrl}/dishes/list${_id}`);
+    console.log(data, "cart")
+    dispatch({
         type: cartTypes.ADD_TO_CART,
-        payload: {
-            product: data.dish.id,
-            name: data.dish.name,
-            image: data.dish.image,
-            price: data.dish.price,
-            countInStock: data.dish.countInStock,
-            qty
-        },
-    });
-    localStorage.setItem('cart', JSON.stringify(getState().cart.cartDish));
+        payload:{
+            id: data._id,
+            name: data.name,
+            image: data.image,
+            price: data.price
+        }
+    })
 }
 
-export const removeFromCart =  (id) => ( dispatch, getState ) => {
+export const removeFromCart =  (_id) => async (dispatch) => {
+    const {data } = await axios.get(`${baseUrl}/dishes/list${_id}`);
     dispatch({
         type: cartTypes.REMOVE_FROM_CART,
-        payload: id
+            id: data._id,
+            name: data.name,
+            image: data.image,
+            price: data.price
     });
-    localStorage.setItem('cart', JSON.stringify(getState().cart.cartDish));
+}
+
+export const emptyCart = () => {
+    console.log("There is nothing in your cart")
 }

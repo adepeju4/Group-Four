@@ -12,9 +12,6 @@ export const productsReducer = (state = initialState, action) => {
       const { data } = action;
       return { ...initialState, data };
     }
-<<<<<<< HEAD
-};
-=======
     case productsTypes.SET_PENDING: {
       const { pending } = action;
       return { ...initialState, pending };
@@ -27,4 +24,3 @@ export const productsReducer = (state = initialState, action) => {
       return state;
   }
 };
->>>>>>> 898be4c637e9ae3396844b33a3aae93d686882a3

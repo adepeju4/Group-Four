@@ -1,16 +1,4 @@
 /* eslint-disable react/prop-types */
-
-<<<<<<< HEAD
-const MealScreen = () => {
-    return (
-        <div>
-            <div>
-                <h2>Domino&apos; Pizza</h2>
-                <p>Extra Large</p>
-                <p>N1,600</p>
-                <p>lorem20</p>
-=======
-
 import styles from "./stylesheets/product.module.css";
 import iconStyles from "./stylesheets/icons.module.css";
 import { Heart } from "./Components/Icons";
@@ -19,12 +7,13 @@ import { FacebookShareButton, TwitterShareButton } from "react-share";
 import ReviewForm from "./Components/ReviewForm";
 import ReviewsList from "./Components/ReviewsList";
 import { useState} from "react";
+import { Link } from "react-router-dom";
+import { addToCart} from "./redux/action/cartAction"
 
 const MealScreen = ({dish, reviews, dishId}) => {
   const rating = [1, 2, 3, 4, 5];
   const [active, setActive] = useState(false);
   const { name, price, description, image } = dish;
-  
  
   return (
     <>
@@ -41,7 +30,9 @@ const MealScreen = ({dish, reviews, dishId}) => {
             })}
           </div>
           <p>{description}</p>
-          <button className={styles.cta}>Add To Cart</button>
+          <Link to = "/cart">
+            <button onClick = {addToCart} className={styles.cta}>Add to Cart</button>
+          </Link>
         </div>
         <div className={styles.productMedia}>
           <div className={styles.productImage}>
@@ -74,7 +65,6 @@ const MealScreen = ({dish, reviews, dishId}) => {
               >
                 <img src="/assets/shareTwitter.png" />
               </TwitterShareButton>
->>>>>>> 898be4c637e9ae3396844b33a3aae93d686882a3
             </div>
           </div>
         </div>
