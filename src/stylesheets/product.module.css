@@ -229,6 +229,9 @@ height: 4rem;
     height: 100vh;
 }
 
+.productBody nav{
+    font-size: 2rem;
+}
 
 @media (max-width: 998px){
     .productBody{
@@ -297,7 +300,7 @@ height: 4rem;
 .shareProduct{
     position: absolute;
     left: 7rem;
-    top: 35.5rem;
+    top: 39.5rem;
     width: 10rem;
    
 }

@@ -4,14 +4,18 @@ import styles from "./stylesheets/product.module.css";
 import iconStyles from "./stylesheets/icons.module.css";
 import { Heart } from "./Components/Icons";
 import { FaStar } from "react-icons/fa";
-// import { AiFillStar } from "react-icons/ai";
+
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import ReviewForm from "./Components/ReviewForm";
 import ReviewsList from "./Components/ReviewsList";
-import { useState} from "react";
+import { useState } from "react";
 import HelmetMetaData from "./Components/HelmetMetaData";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
+import { useHistory } from "react-router-dom";
 
-const MealScreen = ({dish, reviews, dishId}) => {
+const MealScreen = ({ dish, reviews, dishId }) => {
+  const history = useHistory();
+
   const [active, setActive] = useState(false);
   const { name, price, description, image, label } = dish;
   
@@ -19,11 +23,18 @@ const MealScreen = ({dish, reviews, dishId}) => {
   const reviewsRating = reviews?.length && reviews.reduce((acc, value) => acc + value.rating, sum);
   const avgRating = Math.round(reviewsRating ? reviewsRating/reviews.length : 0)
 
-  console.log(dish, "mealscreen")
+  const handleClick = () => {
+    history.go(-1);
+  }
   return (
     <>
+      <HelmetMetaData dish={dish}></HelmetMetaData>
+      <Breadcrumb className={styles.breadcrumb}>
+        <Breadcrumb.Item onClick={handleClick} >Back</Breadcrumb.Item>
+
+        <Breadcrumb.Item active>Meal Page</Breadcrumb.Item>
+      </Breadcrumb>
       <section className={styles.productPreview}>
-        <HelmetMetaData dish={dish}></HelmetMetaData>
         <div className={styles.productInfo}>
           <h1>{name}</h1>
           <h3>{label}</h3>
@@ -81,7 +92,6 @@ const MealScreen = ({dish, reviews, dishId}) => {
                   "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
                   "So, join us and get food delivered to you as soon as possible"
                 }
-                
                 hashtag="#Stutern"
               >
                 <img src="/assets/shareTwitter.png" />
