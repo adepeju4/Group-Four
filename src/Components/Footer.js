@@ -4,17 +4,20 @@ const Footer = () => {
   return (
     <>
       <div className={styles.footer}>
+
         <div>
           <p>Company</p>
           <p>Terms and Conditions</p>
           <p>Privacy Policy</p>
           <p>FAQs</p>
         </div>
+
         <div>
           <p>About</p>
           <p>Company Team</p>
           <p>Blog</p>
         </div>
+
         <div>
           <p>SIGN UP TO OUR NEWSLETTER</p>
 
@@ -38,6 +41,7 @@ const Footer = () => {
           <p>+234123456789</p>
           <p>+234123456789</p>
         </div>
+
         <div>
           <p>Join us on</p>
           <img src="/assets/facebook.png" className={styles.facebook} />
@@ -45,8 +49,10 @@ const Footer = () => {
           <img src="/assets/instagram.png" className={styles.instagram} />
           <img src="/assets/youtube.png" className={styles.youtube} />
         </div>
+        
       </div>
     </>
+
   );
 };
 
