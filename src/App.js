@@ -26,6 +26,10 @@ function App() {
               <Landing />
             </Route>
 
+            <Route path="/about">
+              <About />
+            </Route>
+
             <Route path="/login">
               <LogIn />
             </Route>
@@ -46,7 +50,7 @@ function App() {
         </div>
 
         <Footer />
-        
+
       </BrowserRouter>
     </div>
   );
