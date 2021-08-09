@@ -9,7 +9,7 @@ import { FacebookShareButton, TwitterShareButton } from "react-share";
 import ReviewForm from "./Components/ReviewForm";
 import ReviewsList from "./Components/ReviewsList";
 import { useState } from "react";
-import HelmetMetaData from "./Components/HelmetMetaData";
+
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { useHistory } from "react-router-dom";
 
@@ -18,19 +18,21 @@ const MealScreen = ({ dish, reviews, dishId }) => {
 
   const [active, setActive] = useState(false);
   const { name, price, description, image, label } = dish;
-  
-  let sum  = 0 
-  const reviewsRating = reviews?.length && reviews.reduce((acc, value) => acc + value.rating, sum);
-  const avgRating = Math.round(reviewsRating ? reviewsRating/reviews.length : 0)
+
+  let sum = 0;
+  const reviewsRating =
+    reviews?.length && reviews.reduce((acc, value) => acc + value.rating, sum);
+  const avgRating = Math.round(
+    reviewsRating ? reviewsRating / reviews.length : 0
+  );
 
   const handleClick = () => {
     history.go(-1);
-  }
+  };
   return (
     <>
-      <HelmetMetaData dish={dish}></HelmetMetaData>
       <Breadcrumb className={styles.breadcrumb}>
-        <Breadcrumb.Item onClick={handleClick} >Back</Breadcrumb.Item>
+        <Breadcrumb.Item onClick={handleClick}>Back</Breadcrumb.Item>
 
         <Breadcrumb.Item active>Meal Page</Breadcrumb.Item>
       </Breadcrumb>

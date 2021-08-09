@@ -18,8 +18,8 @@ export const productReducer = (state = initialState, action) => {
       return { ...initialState, data };
     }
     case reviewsTypes.SET_REVIEW: {
-      const { data } = action
-      return { ...state, reviews: [...state.reviews, data]}
+      const { data } = action;
+      return { ...state, reviews: [...state.reviews, data] };
     }
     case productTypes.SET_PENDING: {
       const { pending } = action;

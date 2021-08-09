@@ -1,15 +1,15 @@
-import {useState} from 'react';
+import { useState } from "react";
 import styles from "../stylesheets/product.module.css";
 import StarRating from "./StarRating";
 import { useDispatch } from "react-redux";
 import { createReviewAsync } from "../redux/action/productsAction";
 
 const initForm = {
-    rating: 0,
-    title: '',
-    comment: '',
-    author: ''
-}
+  rating: 0,
+  title: "",
+  comment: "",
+  author: "",
+};
 
 const reviewForm = ({ dishId }) => {
   const dispatch = useDispatch();
@@ -19,28 +19,27 @@ const reviewForm = ({ dishId }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
-      ...form, 
-      dishId
-    }
+      ...form,
+      dishId,
+    };
     dispatch(createReviewAsync(data));
-    setForm(initForm)
-    
-  }
+    setForm(initForm);
+  };
 
   const handleChange = (e) => {
-    const {name, value} = e.target
-    setForm(prevForm => ({
+    const { name, value } = e.target;
+    setForm((prevForm) => ({
       ...prevForm,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
   const handleRate = (rate) => {
-    setForm(prevForm => ({
+    setForm((prevForm) => ({
       ...prevForm,
-      rating: rate
-    }))
-  }
-  
+      rating: rate,
+    }));
+  };
+
   return (
     <>
       <div className={styles.createReview}>
@@ -48,7 +47,7 @@ const reviewForm = ({ dishId }) => {
         <form className={styles.reviewForm} onSubmit={handleSubmit}>
           <label htmlFor="rating">Rate this meal</label>
           <StarRating handleRate={handleRate} />
-          
+
           <label htmlFor="author">Author</label>
           <input
             type="text"
@@ -68,7 +67,12 @@ const reviewForm = ({ dishId }) => {
             onChange={handleChange}
           />
           <label htmlFor="comment">Comment</label>
-          <textarea name="comment" value={form.comment} onChange={handleChange} className={styles.reviewComment}></textarea>
+          <textarea
+            name="comment"
+            value={form.comment}
+            onChange={handleChange}
+            className={styles.reviewComment}
+          ></textarea>
           <button className={styles.submitReview}>Add Review</button>
         </form>
       </div>

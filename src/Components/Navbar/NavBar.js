@@ -5,14 +5,14 @@ import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { LightVariantCart } from "../Icons";
 
-import { Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const NavBar = () => {
   const [status, setStatus] = useState(false);
   const dispatch = useDispatch();
   const { isAuthenticated } = useSelector((state) => state.userLogin);
   let history = useHistory();
-  
+
   function refreshPage() {
     localStorage.removeItem("userToken");
     history.push("/");
@@ -33,7 +33,6 @@ const NavBar = () => {
               <li className={styles.navLinks}>
                 <Link to="/cart">
                   <FaShoppingCart />
-                  
                 </Link>
               </li>
               <li className={styles.navLinks}>

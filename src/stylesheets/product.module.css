@@ -297,13 +297,13 @@ height: 4rem;
     height: 30rem;
     
 }
-.shareProduct{
+/* .shareProduct{
     position: absolute;
     left: 7rem;
     top: 39.5rem;
     width: 10rem;
    
-}
+} */
 .reviewContainer{
     display: flex;
     margin: 3rem auto;
@@ -311,5 +311,10 @@ height: 4rem;
     width: 90%;
     flex-direction: column;
    
+}
+.row{
+        align-self: flex-end !important;
+    height: 9rem !important;
+    width: 36rem !important;
 }
 }

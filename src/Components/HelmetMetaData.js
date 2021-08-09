@@ -4,27 +4,19 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import baseUrl from "../utils/BaseUrl";
 
-
-export default function HelmetMetaData({ dish }) {
-  console.log(dish, "metadata")
+export default function HelmetMetaData() {
   let location = useLocation();
   let currentUrl = baseUrl + location.pathname;
   let quote = "Fodine Meals and Taste for Culture";
-  let title =
-    dish.name !== undefined
-      ? dish.name
-      : "Foodine Breathtaking Meal Store";
+
+  let title = "Foodine";
   let image =
-    dish.image !== undefined
-      ? dish.image
-      : "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
+    "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
   let description =
-    dish.description !== undefined
-      ? dish.description
-      : "Foodine lets you experience the amazing meal choices. We discover the hidden gems in the nearby to help you connect with various cultures and meal diversities" +
-        "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
-        "So, join us and get food delivered to you as soon as possible";
-  let hashtag = dish.hashtag !== undefined ? dish.hashtag : "#Foodine";
+    "Foodine lets you experience the amazing meal choices. We discover the hidden gems in the nearby to help you connect with various cultures and meal diversities" +
+    "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
+    "So, join us and get food delivered to you as soon as possible";
+  let hashtag = "#Foodine";
   return (
     <Helmet>
       <title>{title}</title>

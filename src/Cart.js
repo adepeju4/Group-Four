@@ -1,5 +1,3 @@
-
-
 import styles from "./stylesheets/cart.module.css";
 const Cart = () => {
   return (
@@ -7,7 +5,6 @@ const Cart = () => {
       <div className={styles.hero}>
         ^ _ ^ this is the cart page.happy development.
       </div>
-
     </>
   );
 };
