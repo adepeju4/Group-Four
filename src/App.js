@@ -1,6 +1,7 @@
 import Landing from "./Landing.js";
 import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
+import About from "./About.js";
 import Cart from "./Cart.js";
 import Checkout from "./Checkout.js";
 import Product from "./Product.js";
@@ -44,6 +45,11 @@ function App() {
             <Route path="/checkout">
               <Checkout />
             </Route>
+
+            <Route path="/about">
+              <About />
+            </Route>
+
           </Switch>
         </div>
         <Footer />
