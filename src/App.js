@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./Components/Footer.js";
 import ScrollToTop from "./Components/ScrollToTop.js";
 
+
 function App() {
   // const userLogin = useSelector((state) => state.userLogin)
   // const {user} = userLogin
@@ -22,6 +23,7 @@ function App() {
         <NavBar />
 
         <div className="content">
+          
           <Switch>
             <Route exact path="/">
               <Landing />

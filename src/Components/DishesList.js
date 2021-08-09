@@ -8,6 +8,7 @@ import baseUrl from "../utils/BaseUrl";
 
 
 export const AllDishesList = ({ category, dishes, searchTerm }) => {
+  console.log(dishes);
   const filterBySearch = (dish) => {
     if(searchTerm) {
       return dish.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -37,6 +38,7 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
               </div>
               <div className={styles.dishDetails}>
                 <p className={styles.dishTitle}>{dish.name}</p>
+                <p className={styles.label}>{dish.label}</p>
                 <p className={styles.price}>{"\u20A6"}{dish.price}</p>
               </div>
             </Link>
@@ -48,7 +50,7 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
 
 export const MostOrderedMeals = () => {
   const { data: dishes } = useAxios(
-    `${baseUrl}/dishes/query`,{params:{category: "seafood"}}
+    `${baseUrl}/dishes/query`,{params:{featured: true}}
   );
   
   return (
@@ -63,6 +65,7 @@ export const MostOrderedMeals = () => {
                </div>
                <div className={styles.dishDetails}>
                  <p className={styles.dishTitle}>{dish.name}</p>
+                 <p className={styles.label}>{dish.label}</p>
                  <p className={styles.price}>
                    {"\u20A6"}
                    {dish.price}

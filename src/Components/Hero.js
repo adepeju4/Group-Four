@@ -25,7 +25,7 @@ const Hero = () => {
               <input
                 type="text"
                 name="address"
-                className={styles.input}
+                className={styles.inputAddress}
                 id="address"
                 placeholder="Write in your address"
               />

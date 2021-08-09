@@ -27,7 +27,7 @@ const ReviewsList = ({reviews}) => {
                   })}
                 </div>
                 <div className={styles.reviewTitle}>{review.title}</div>
-                <div className={styles.comment}>{review.comment}</div>
+                <div className={styles.reviewComment}>{review.comment}</div>
               </div>
           );
         })

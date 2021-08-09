@@ -1,9 +1,8 @@
 .productBody{
-    padding: 5rem;
+    padding: 3rem 5rem;
 }
 
 .productPreview{
-    margin-top: 5rem;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -75,7 +74,7 @@ flex-direction: column;
     display: flex;
     align-self: flex-end;
     flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 
@@ -113,8 +112,9 @@ display: flex;
 }
 
 .reviewContainer .review{
+    width: 100%;
     padding: 2rem;
-     box-shadow: 7px 7px 0px -3px #000000;
+     box-shadow: 3px 5px 3px -4px #000000;
 }
 
 .user{
@@ -227,4 +227,86 @@ height: 4rem;
     align-items: center;
     font-size: 1.3rem;
     height: 100vh;
+}
+
+
+@media (max-width: 998px){
+    .productBody{
+        position: relative;
+    }
+    .productPreview{
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.productMedia{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shareProduct h3{
+    display: none;
+}
+.productInfo{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45rem;
+}
+.productPreview h1{
+    font-size: 6.6rem;
+}
+.productPreview p{
+    font-size: 1.5rem;
+}
+
+
+.productReviews{
+    margin-top: 5rem;
+}
+ 
+.shareProduct{
+     width: 10rem;
+      margin-right: 0;
+}
+
+.productInfo{
+    margin-top: 2rem;
+}
+
+}
+
+
+
+@media (max-width: 400px){
+    
+     .reviewForm{
+    width: 100%;
+}
+.createReview input{
+    width: 100%;
+}
+.productImage{
+    width: 100%;
+    height: 30rem;
+    
+}
+.shareProduct{
+    position: absolute;
+    left: 7rem;
+    top: 35.5rem;
+    width: 10rem;
+   
+}
+.reviewContainer{
+    display: flex;
+    margin: 3rem auto;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+   
+}
 }

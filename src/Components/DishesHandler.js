@@ -21,10 +21,10 @@ const DishesHandler = () => {
   }, []);
   return (
     <>
-      <div id="main" className={styles.main}>
+      <div className={styles.main}>
         <div className={styles.mostOrderedDish}>
           <div className={styles.modHeader}>
-            <h2 style={{ fontSize: "2rem" }}>Most Ordered Meals</h2>
+            <h2>Most Ordered Meals</h2>
           </div>
           {data && <MostOrderedMeals />}
           {pending && (
@@ -38,7 +38,7 @@ const DishesHandler = () => {
         </div>
         <div className={styles.allDishes}>
           <div className={styles.allDishesHeader}>
-            <h3 style={{ fontSize: "2rem" }}>Our Dishes</h3>
+            <h3>Our Dishes</h3>
             <div className={styles.filterContainer}>
               <input
                 type="text"

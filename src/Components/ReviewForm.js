@@ -45,7 +45,7 @@ const reviewForm = ({ dishId }) => {
     <>
       <div className={styles.createReview}>
         <header>Post a review</header>
-        <form onSubmit={handleSubmit}>
+        <form className={styles.reviewForm} onSubmit={handleSubmit}>
           <label htmlFor="rating">Rate this meal</label>
           <StarRating handleRate={handleRate} />
           
