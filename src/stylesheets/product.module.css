@@ -133,10 +133,7 @@ display: flex;
     margin-right: 1rem;
 }
 
-.reviewTitle{
-    
-    
-}
+
 
 .reviewComment{
     font-size: 2rem;
@@ -214,9 +211,7 @@ height: 4rem;
     margin-top: 1rem;
 }
 
-.createReview form{
 
-}
 .reviewFormContainer{
     margin-top: 10rem;
 }
@@ -280,6 +275,14 @@ height: 4rem;
 .productInfo{
     margin-top: 2rem;
 }
+.reviewContainer{
+    display: flex;
+    margin: 3rem auto;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+   
+}
 
 }
 
@@ -298,13 +301,7 @@ height: 4rem;
     height: 30rem;
     
 }
-/* .shareProduct{
-    position: absolute;
-    left: 7rem;
-    top: 39.5rem;
-    width: 10rem;
-   
-} */
+
 .reviewContainer{
     display: flex;
     margin: 3rem auto;
