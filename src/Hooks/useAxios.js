@@ -12,7 +12,6 @@ const useAxios = (url, params) => {
       .then((res) => {
         setData(res?.data.data);
         setIsPending(false);
-       
       })
       .catch((err) => {
         setIsPending(false);
@@ -26,5 +25,3 @@ const useAxios = (url, params) => {
 };
 
 export default useAxios;
-
-

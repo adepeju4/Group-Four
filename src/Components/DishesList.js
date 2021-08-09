@@ -5,11 +5,10 @@ import styles from "../stylesheets/dishesList.module.css";
 import useAxios from "../Hooks/useAxios";
 import baseUrl from "../utils/BaseUrl";
 
-
-
 export const AllDishesList = ({ category, dishes, searchTerm }) => {
+  console.log(dishes);
   const filterBySearch = (dish) => {
-    if(searchTerm) {
+    if (searchTerm) {
       return dish.name.toLowerCase().includes(searchTerm.toLowerCase());
     }
 
@@ -17,7 +16,7 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
   };
 
   const filterByCategory = (dish) => {
-    if(category) {
+    if (category) {
       return category === dish.category;
     }
 
@@ -37,7 +36,11 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
               </div>
               <div className={styles.dishDetails}>
                 <p className={styles.dishTitle}>{dish.name}</p>
-                <p className={styles.price}>{"\u20A6"}{dish.price}</p>
+                <p className={styles.label}>{dish.label}</p>
+                <p className={styles.price}>
+                  {"\u20A6"}
+                  {dish.price}
+                </p>
               </div>
             </Link>
           </div>
@@ -47,32 +50,31 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
 };
 
 export const MostOrderedMeals = () => {
-  const { data: dishes } = useAxios(
-    `${baseUrl}/dishes/query`,{params:{category: "seafood"}}
-  );
-  
+  const { data: dishes } = useAxios(`${baseUrl}/dishes/query`, {
+    params: { featured: true },
+  });
+
   return (
     <div className={styles.dishesList}>
       {dishes?.map((dish) => {
-       
-         return (
-           <div className={styles.dishContainer} key={dish._id}>
-             <Link to={`/dishes/${dish._id}`}>
-               <div className={styles.dishesImage}>
-                 <img src={dish.image} />
-               </div>
-               <div className={styles.dishDetails}>
-                 <p className={styles.dishTitle}>{dish.name}</p>
-                 <p className={styles.price}>
-                   {"\u20A6"}
-                   {dish.price}
-                 </p>
-               </div>
-             </Link>
-           </div>
-         );
-})}
+        return (
+          <div className={styles.dishContainer} key={dish._id}>
+            <Link to={`/dishes/${dish._id}`}>
+              <div className={styles.dishesImage}>
+                <img src={dish.image} />
+              </div>
+              <div className={styles.dishDetails}>
+                <p className={styles.dishTitle}>{dish.name}</p>
+                <p className={styles.label}>{dish.label}</p>
+                <p className={styles.price}>
+                  {"\u20A6"}
+                  {dish.price}
+                </p>
+              </div>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };
-

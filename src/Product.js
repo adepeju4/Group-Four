@@ -7,18 +7,19 @@ import styles from "./stylesheets/product.module.css";
 import { Spinner } from "react-bootstrap";
 
 const Product = () => {
-
   const dispatch = useDispatch();
-   const { id } = useParams();
-   
-  const { data: dish, reviews, pending: isPending } = useSelector(
-    (state) => state.product
-  );
+  const { id } = useParams();
+
+  const {
+    data: dish,
+    reviews,
+    pending: isPending,
+  } = useSelector((state) => state.product);
 
   useEffect(() => {
     dispatch(getProductAsync(id));
   }, [id]);
- 
+
   return (
     <>
       <div className={styles.productBody}>

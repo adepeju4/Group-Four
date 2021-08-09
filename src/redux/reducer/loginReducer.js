@@ -6,7 +6,7 @@ const initialState = {
   user: {},
   isLoading: false,
   error: {},
-  ...savedUser
+  ...savedUser,
 };
 
 export const loginReducer = (state = initialState, action) => {

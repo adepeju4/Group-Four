@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "./redux/action/userAction";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 import styles from "./stylesheets/login.module.css";
 
@@ -59,7 +59,6 @@ const LogIn = () => {
           />
         </div>
         <div className={styles["form-control"]}>
-          
           <button type="submit">Login</button>
         </div>
       </form>

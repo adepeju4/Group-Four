@@ -96,3 +96,10 @@
     height: 500px;
   }
 }
+
+@media (min-width: 400px){
+.heart {
+  margin-right: 2rem;
+}
+}
+
