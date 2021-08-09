@@ -77,7 +77,7 @@ const MealScreen = ({ dish, reviews, dishId }) => {
             <h3>SHARE</h3>
             <div className={styles.socials}>
               <FacebookShareButton
-                url="https://nifty-lumiere-b22b44.netlify.app/"
+                url="https://foodinemealapp.herokuapp.com/"
                 quote={
                   "Foodine lets you experience the amazing meal choices. We discover the hidden gems in the nearby to help you connect with various cultures and meal diversities" +
                   "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
@@ -88,7 +88,7 @@ const MealScreen = ({ dish, reviews, dishId }) => {
                 <img src="/assets/shareFacebook.png" />
               </FacebookShareButton>
               <TwitterShareButton
-                url="https://nifty-lumiere-b22b44.netlify.app/"
+                url="https://foodinemealapp.herokuapp.com/"
                 uote={
                   "Foodine lets you experience the amazing meal choices. We discover the hidden gems in the nearby to help you connect with various cultures and meal diversities" +
                   "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
