@@ -3,6 +3,7 @@
   position: relative;
   padding-left: 56px;
   padding-right: 56px;
+ 
 }
 .main{
     padding-left: 56px;
@@ -34,12 +35,15 @@
 
 .navigation {
   width: 100%;
+  position: fixed;
+  /* margin-bottom: 3rem; */
   display: flex;
   align-items: center;
   padding: 1rem 5rem;
   background: #000;
   border: 1px solid #000;
-  /* z-index: 1; */
+  z-index: 1;
+  
 }
 
 .landingNav {
@@ -126,6 +130,7 @@
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
+  
 }
 
 .heroContent .heroCaption{
@@ -189,7 +194,7 @@
 
 #mobileNav {
   position: fixed;
-  width: 28rem;
+  width: 20rem;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2),
     0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
   background: #fff;

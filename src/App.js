@@ -1,9 +1,9 @@
 import Landing from "./Landing.js";
 import LogIn from "./LogIn.js";
 import SignUp from "./SignUp.js";
-import About from "./About.js";
 import Cart from "./Cart.js";
 import Product from "./Product.js";
+import About from "./About.js";
 import HelmetMetaData from "./Components/HelmetMetaData";
 
 import NavBar from "./Components/Navbar/NavBar.js";
@@ -16,18 +16,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <NavBar />
         <ScrollToTop />
         <HelmetMetaData />
-        <NavBar />
 
         <div className="content">
           <Switch>
             <Route exact path="/">
               <Landing />
-            </Route>
-
-            <Route path="/about">
-              <About />
             </Route>
 
             <Route path="/login">
@@ -41,17 +37,16 @@ function App() {
             <Route path="/dishes/:id">
               <Product />
             </Route>
-
+            <Route path="/about">
+              <About/>
+         </Route>
             <Route path="/cart">
               <Cart />
             </Route>
-
           </Switch>
         </div>
-
-        <Footer />
-
       </BrowserRouter>
+        <Footer />
     </div>
   );
 }

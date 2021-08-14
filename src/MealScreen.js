@@ -6,15 +6,15 @@ import { AiOutlineStar } from "react-icons/ai";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import ReviewForm from "./Components/ReviewForm";
 import ReviewsList from "./Components/ReviewsList";
-import { useState} from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { addToCart} from "./redux/action/cartAction"
+import { addToCart } from "./redux/action/cartAction";
 
-const MealScreen = ({dish, reviews, dishId}) => {
+const MealScreen = ({ dish, reviews, dishId }) => {
   const rating = [1, 2, 3, 4, 5];
   const [active, setActive] = useState(false);
   const { name, price, description, image } = dish;
- 
+
   return (
     <>
       <section className={styles.productPreview}>
@@ -30,8 +30,10 @@ const MealScreen = ({dish, reviews, dishId}) => {
             })}
           </div>
           <p>{description}</p>
-          <Link to = "/cart">
-            <button onClick = {addToCart} className={styles.cta}>Add to Cart</button>
+          <Link to="/cart">
+            <button onClick={addToCart} className={styles.cta}>
+              Add to Cart
+            </button>
           </Link>
         </div>
         <div className={styles.productMedia}>
@@ -72,10 +74,10 @@ const MealScreen = ({dish, reviews, dishId}) => {
       <section className={styles.productReviews}>
         <h2 className={styles.reviewHeading}>Meal Reviews</h2>
 
-        <ReviewsList reviews={ reviews}/>
+        <ReviewsList reviews={reviews} />
       </section>
       <section className={styles.reviewFormContainer}>
-        <ReviewForm dishId={dishId}/>
+        <ReviewForm dishId={dishId} />
       </section>
     </>
   );

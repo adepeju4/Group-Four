@@ -3,12 +3,12 @@ import styles from "../stylesheets/landing.module.css";
 import { Circle, RightPlate, LeftPlate } from "./Icons";
 import { Link } from "react-router-dom";
 
+
 const Hero = () => {
   return (
     <>
+      <Circle className={styles.circle} />
       <div className={styles.heroSection}>
-        <Circle className={styles.circle} />
-
         <div className={styles.heroContent}>
           <div>
             <h1 className={styles.heroCaption}>{"Hungry? You're "}</h1>
@@ -31,7 +31,7 @@ const Hero = () => {
             </div>
           </div>
           <div>
-            <img src="/assets/food.png" className={styles.foodImg} />
+            <img src="assets/food.png" className={styles.foodImg} />
           </div>
         </div>
         <LeftPlate className={styles.left} />

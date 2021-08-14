@@ -77,10 +77,11 @@
           display: flex;
           padding-top: 1rem;
           margin: 0 6rem;
-          flex-direction: column;
+          flex-direction: column-reverse;
           margin-bottom: 9rem;
-          margin-top: 4rem;
-          position: relative;
+          justify-content: center;
+          height: 55vh;
+          
     }
     
     .about_text {
@@ -106,7 +107,7 @@
         width: 33%;
         margin-top: 12rem;
         z-index: -2;
-        position: absolute;
+        
         top: -130px;
         right: 30px;
    }

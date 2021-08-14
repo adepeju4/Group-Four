@@ -1,6 +1,10 @@
 .circle {
   display: none;
   position: absolute;
+  /* background: url("https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE4fHx0cmFuc3BhcmVudCUyMGJhY2tncm91bmQlMjBmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .plateImageLeft {

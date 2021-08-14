@@ -6,6 +6,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 10rem;
 }
 
 .productInfo{
@@ -288,7 +289,7 @@ height: 4rem;
 
 
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     
      .reviewForm{
     width: 100%;
