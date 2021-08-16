@@ -231,7 +231,7 @@ height: 4rem;
 }
 
 .productInfo{
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
 }
 
 @media (max-width: 998px){
