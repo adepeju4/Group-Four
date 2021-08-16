@@ -3,14 +3,16 @@ import styles from "../../stylesheets/landing.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { LightVariantCart } from "../Icons";
+import style from "../../stylesheets/signup.module.css";
 
+import { useLocation } from "react-router";
 import { Link, useHistory } from "react-router-dom";
 
 const NavBar = () => {
   const [status, setStatus] = useState(false);
   const dispatch = useDispatch();
   const { isAuthenticated } = useSelector((state) => state.userLogin);
+  let location = useLocation();
   let history = useHistory();
 
   function refreshPage() {
@@ -18,10 +20,19 @@ const NavBar = () => {
     history.push("/");
     window.location.reload(false);
   }
+
+  function handleBackButton() {
+    history.go(-1);
+  }
   return (
     <>
       <div className={styles.navigation}>
         <div className={styles.logo}>
+          {
+            location.pathname !== '/' &&
+            <img className={style.img2} src="/assets/Vector.svg" onClick={handleBackButton} style={{marginRight: "2rem", cursor:"pointer"}} />
+          }
+        
           <Link to="/">foodine</Link>
         </div>
         <div className={styles.mobileContainer}>

@@ -230,6 +230,10 @@ height: 4rem;
     font-size: 2rem;
 }
 
+.productInfo{
+    margin-top: 5rem;
+}
+
 @media (max-width: 998px){
     .productBody{
         position: relative;

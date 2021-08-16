@@ -30,7 +30,7 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div>
+          <div className={styles.heroImage}>
             <img src="assets/food.png" className={styles.foodImg} />
           </div>
         </div>

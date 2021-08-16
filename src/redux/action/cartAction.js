@@ -3,7 +3,7 @@ import axios from "axios";
 import baseUrl from "../../utils/BaseUrl";
 
 export const addToCart = (_id) => async (dispatch) => {
-  const { data } = await axios.get(`${baseUrl}/dishes/${_id}`);
+  const { data } = await axios.get(`${baseUrl}/cart/${_id}`);
   console.log(data, "cart");
   dispatch({
     type: cartTypes.ADD_TO_CART,
@@ -17,7 +17,7 @@ export const addToCart = (_id) => async (dispatch) => {
 };
 
 export const removeFromCart = (_id) => async (dispatch) => {
-  const { data } = await axios.get(`${baseUrl}/dishes/${_id}`);
+  const { data } = await axios.get(`${baseUrl}/cart/${_id}`);
   dispatch({
     type: cartTypes.REMOVE_FROM_CART,
     id: data._id,

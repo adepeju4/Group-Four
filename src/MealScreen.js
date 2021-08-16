@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import styles from "./stylesheets/product.module.css";
 import iconStyles from "./stylesheets/icons.module.css";
@@ -9,11 +10,15 @@ import ReviewsList from "./Components/ReviewsList";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { addToCart } from "./redux/action/cartAction";
+import { useDispatch, useSelector } from "react-redux";
+
 
 const MealScreen = ({ dish, reviews, dishId }) => {
   const rating = [1, 2, 3, 4, 5];
   const [active, setActive] = useState(false);
   const { name, price, description, image } = dish;
+   const dispatch = useDispatch();
+  const { isAuthenticated } = useSelector((state) => state.userLogin);
 
   return (
     <>
@@ -30,11 +35,19 @@ const MealScreen = ({ dish, reviews, dishId }) => {
             })}
           </div>
           <p>{description}</p>
-          <Link to="/cart">
-            <button onClick={addToCart} className={styles.cta}>
-              Add to Cart
-            </button>
-          </Link>
+          {!isAuthenticated ? (
+            <Link to="/signup">
+              <button onClick={addToCart} className={styles.cta}>
+                Add to Cart
+              </button>
+            </Link>
+          ) : (
+            <Link to="/cart">
+              <button onClick={addToCart} className={styles.cta}>
+                Add to Cart
+              </button>
+            </Link>
+          )}
         </div>
         <div className={styles.productMedia}>
           <div className={styles.productImage}>

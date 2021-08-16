@@ -9,6 +9,7 @@ import HelmetMetaData from "./Components/HelmetMetaData";
 import NavBar from "./Components/Navbar/NavBar.js";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import CustomSwitch from "./Components/CustomSwitch.js";
 import Footer from "./Components/Footer.js";
 import ScrollToTop from "./Components/ScrollToTop.js";
 
@@ -21,32 +22,34 @@ function App() {
         <HelmetMetaData />
 
         <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Landing />
-            </Route>
+          <CustomSwitch>
+            <Switch>
+              <Route exact path="/">
+                <Landing />
+              </Route>
 
-            <Route path="/login">
-              <LogIn />
-            </Route>
+              <Route path="/login">
+                <LogIn />
+              </Route>
 
-            <Route path="/signup">
-              <SignUp />
-            </Route>
+              <Route path="/signup">
+                <SignUp />
+              </Route>
 
-            <Route path="/dishes/:id">
-              <Product />
-            </Route>
-            <Route path="/about">
-              <About/>
-         </Route>
-            <Route path="/cart">
-              <Cart />
-            </Route>
-          </Switch>
+              <Route path="/dishes/:id">
+                <Product />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/cart">
+                <Cart />
+              </Route>
+            </Switch>
+          </CustomSwitch>
         </div>
       </BrowserRouter>
-        <Footer />
+      <Footer />
     </div>
   );
 }

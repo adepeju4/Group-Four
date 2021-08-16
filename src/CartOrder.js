@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import styles from "./stylesheets/cart.module.css";
 import { removeFromCart } from "./redux/action/cartAction";
+import { Link } from 'react-router-dom';
 
 const CartOrder = (dish) => {
     // const { name, image, price } = dish;
@@ -23,7 +24,7 @@ const CartOrder = (dish) => {
                 </div>
 
                 <div className={styles.idContainer}>
-                <a href={`/dish/${1}`} className={styles.idName} > <p> Domino <span>&#39;</span>s Pizza</p> </a>
+                <Link to={`/dish/${1}`} className={styles.idName} > <p> Domino <span>&#39;</span>s Pizza</p> </Link>
                     <h3 className={styles.orderSize}>Extra Large</h3>
                 </div>
 

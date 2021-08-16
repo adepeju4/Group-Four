@@ -29,7 +29,7 @@ export const getProductsAsync = () => async (dispatch) => {
 
     console.log(res, "response");
 
-    console.log(baseUrl, "base url");
+    
     dispatch(getProducts(res.data.dishes));
   } catch (err) {
     console.log(err);

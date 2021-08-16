@@ -1,7 +1,7 @@
 import style from "./stylesheets/signup.module.css";
 import { FaGoogle } from "react-icons/fa";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 // library.add(faGoogle)
 
@@ -49,9 +49,7 @@ const SignUp = () => {
       <div className={style.first}>
         <div className={style.image}>
           <img className={style.img} src="/assets/Hamburger-SignUp.jpg" />
-          <Link to="/">
-            <img className={style.img2} src="/assets/Vector.svg" />
-          </Link>
+        
           <div className={style.logo}>
             <p>foodine</p>
           </div>
