@@ -77,14 +77,14 @@
           display: flex;
           padding-top: 1rem;
           margin: 0 6rem;
-          flex-direction: column;
+          flex-direction: column-reverse;
           margin-bottom: 9rem;
-          margin-top: 4rem;
-          position: relative;
+          margin-top: 2rem;
     }
     
     .about_text {
             margin-right: 0;
+            margin-top: -10rem;
       }
     
     .about_text > h1 {
@@ -104,10 +104,9 @@
 
     .food_img {
         width: 33%;
-        margin-top: 12rem;
+        margin-top: unset;
         z-index: -2;
-        position: absolute;
-        top: -130px;
-        right: 30px;
+        margin-left: 23rem;
+        
    }
 }

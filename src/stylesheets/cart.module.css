@@ -151,9 +151,11 @@
   border-radius: 40px;
 }
 
-/* @media(max-width: 414px){
+@media(max-width: 575px){
     .cartBody {
       margin: unset;
+      display: flex;
+      justify-content: center;
     }
 
     .paymentContainer {
@@ -162,8 +164,9 @@
 
     .eachCartItem {
       flex-direction: column;
-      width: 150%;
+      width: 380px;
       align-items: center;
       height: unset;
+      margin: 7rem auto;
     }
-} */
+}
