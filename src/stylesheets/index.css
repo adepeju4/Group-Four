@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -25,6 +26,12 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+      -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 li {

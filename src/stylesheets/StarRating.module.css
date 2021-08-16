@@ -1,0 +1,9 @@
+.star{
+    font-size: 1.3rem;
+    /* margin: 2rem 0; */
+    cursor: pointer;
+}
+
+.ratingRadio{
+    display: none;
+}

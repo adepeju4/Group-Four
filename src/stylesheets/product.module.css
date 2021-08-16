@@ -1,12 +1,12 @@
 .productBody{
-    padding: 5rem;
+    padding: 3rem 5rem;
 }
 
 .productPreview{
-    margin-top: 5rem;
-    height: 70vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 10rem;
 }
 
 .productInfo{
@@ -39,19 +39,23 @@
     height: 7.3rem;
     font-size: 2.4rem;
     font-weight: 700;
+    text-decoration: none;
     margin-top: 3rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 
 .productImage{
-
+    height: 40rem;
+    width: 50rem;
     margin-top: 2rem;
+
 }
 
 .productImage img{
     width: 100%;
-    
+    height: 100%;
+    border-radius: 3rem;
 }
 
 .productMedia{
@@ -72,7 +76,7 @@ flex-direction: column;
     display: flex;
     align-self: flex-end;
     flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 
@@ -88,4 +92,232 @@ display: flex;
 .socials img{
     width: 3rem;
     cursor: pointer;
+}
+
+.reviewHeading{
+    display: flex;
+    justify-self: center;
+    margin: 0 auto;
+    font-size: 4rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.reviewContainer{
+    display: grid;
+    margin: 3rem auto;
+    align-items: center;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+   
+}
+
+.reviewContainer .review{
+    width: 100%;
+    padding: 2rem;
+     box-shadow: 3px 5px 3px -4px #000000;
+}
+
+.user{
+    font-weight: 700;
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user div{
+    height: 6.2rem;
+    width: 6.2rem;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-right: 1rem;
+}
+
+
+
+.reviewComment{
+    font-size: 2rem;
+    outline: none;
+}
+
+
+.createReview{
+    display: flex;
+    /* width: 100vw; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createReview form{
+    display: flex;
+    flex-direction: column;
+}
+.createReview header{
+    font-weight: 700;
+    font-size: 3.6rem;
+
+   
+}
+
+.createReview input{
+    width: 40rem;
+    outline: none;
+margin-bottom: 3rem;
+     background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+
+border-radius: 10px;
+   
+}
+
+.createReview  .reviewTitle{
+height: 4rem;
+}
+
+.createReview  .reviewComment{
+    height: 20rem;
+    border-radius: 10px;
+}
+
+.reviewTitle, .reviewComment{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.submitReview{
+        width: 15rem;
+    padding: 1rem;
+   
+    border: 1px solid black;
+    background: #000;
+    color: #fff;
+    outline: none;
+   font-weight: 700;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+}
+
+.submitReview:hover{
+    background: #fff;
+     color: #000;
+     transition: all ease .5s;
+}
+
+.createReview form label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+.reviewFormContainer{
+    margin-top: 10rem;
+}
+
+.pending{
+  background: #fff;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    height: 100vh;
+}
+
+.productBody nav{
+    font-size: 2rem;
+}
+
+.productInfo{
+    /* margin-top: 5rem; */
+}
+
+@media (max-width: 998px){
+    .productBody{
+        position: relative;
+    }
+    .productPreview{
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.productMedia{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shareProduct h3{
+    display: none;
+}
+.productInfo{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45rem;
+}
+.productPreview h1{
+    font-size: 6.6rem;
+}
+.productPreview p{
+    font-size: 1.5rem;
+}
+
+
+.productReviews{
+    margin-top: 5rem;
+}
+ 
+.shareProduct{
+     width: 10rem;
+      margin-right: 0;
+}
+
+.productInfo{
+    margin-top: 2rem;
+}
+.reviewContainer{
+    display: flex;
+    margin: 3rem auto;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+   
+}
+
+}
+
+
+
+@media (max-width: 450px){
+    
+     .reviewForm{
+    width: 100%;
+}
+.createReview input{
+    width: 100%;
+}
+.productImage{
+    width: 100%;
+    height: 30rem;
+    
+}
+
+.reviewContainer{
+    display: flex;
+    margin: 3rem auto;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+   
+}
+.row{
+        align-self: flex-end !important;
+    height: 9rem !important;
+    width: 36rem !important;
+}
 }

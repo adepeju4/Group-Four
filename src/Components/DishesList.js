@@ -3,11 +3,12 @@
 import { Link } from "react-router-dom";
 import styles from "../stylesheets/dishesList.module.css";
 import useAxios from "../Hooks/useAxios";
+import baseUrl from "../utils/BaseUrl";
 
-// eslint-disable-next-line no-unused-vars
-export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => {
+export const AllDishesList = ({ category, dishes, searchTerm }) => {
+  console.log(dishes);
   const filterBySearch = (dish) => {
-    if(searchTerm) {
+    if (searchTerm) {
       return dish.name.toLowerCase().includes(searchTerm.toLowerCase());
     }
 
@@ -15,7 +16,7 @@ export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => 
   };
 
   const filterByCategory = (dish) => {
-    if(category) {
+    if (category) {
       return category === dish.category;
     }
 
@@ -28,14 +29,18 @@ export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => 
         .filter(filterBySearch)
         .filter(filterByCategory)
         .map((dish) => (
-          <div className={styles.dishContainer} key={dish.id}>
-            <Link to={`/dishes/${dish.id}`}className={styles.dishContainer}>
+          <div className={styles.dishContainer} key={dish._id}>
+            <Link to={`/dishes/${dish._id}`} className={styles.dishContainer}>
               <div className={styles.dishesImage}>
                 <img src={dish.image} />
               </div>
               <div className={styles.dishDetails}>
                 <p className={styles.dishTitle}>{dish.name}</p>
-                <p className={styles.price}>N{dish.price}</p>
+                <p className={styles.label}>{dish.label}</p>
+                <p className={styles.price}>
+                  {"\u20A6"}
+                  {dish.price}
+                </p>
               </div>
             </Link>
           </div>
@@ -45,28 +50,31 @@ export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => 
 };
 
 export const MostOrderedMeals = () => {
-  const { data: dishes } = useAxios(
-    "http://localhost:8000/dishes",{params:{featured: true}}
-  );
+  const { data: dishes } = useAxios(`${baseUrl}/dishes/query`, {
+    params: { featured: true },
+  });
+
   return (
     <div className={styles.dishesList}>
       {dishes?.map((dish) => {
-        console.log(dish)
-         return (
-           <div className={styles.dishContainer} key={dish.id}>
-             <Link to={`/dishes/${dish.id}`}>
-               <div className={styles.dishesImage}>
-                 <img src={dish.image} />
-               </div>
-               <div className={styles.dishDetails}>
-                 <p className={styles.dishTitle}>{dish.name}</p>
-                 <p className={styles.price}>N{dish.price}</p>
-               </div>
-             </Link>
-           </div>
-         );
-})}
+        return (
+          <div className={styles.dishContainer} key={dish._id}>
+            <Link to={`/dishes/${dish._id}`}>
+              <div className={styles.dishesImage}>
+                <img src={dish.image} />
+              </div>
+              <div className={styles.dishDetails}>
+                <p className={styles.dishTitle}>{dish.name}</p>
+                <p className={styles.label}>{dish.label}</p>
+                <p className={styles.price}>
+                  {"\u20A6"}
+                  {dish.price}
+                </p>
+              </div>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };
-

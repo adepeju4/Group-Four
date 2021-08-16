@@ -1,15 +1,169 @@
-.hero {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 30px;
-  height: 100vh;
+.cartBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    width: 80% auto;
+    margin: 10rem 8.5rem 10rem 8.5rem;
 }
 
-@media (min-width: 576px) {
-  .hero {
-    padding-left: 56px;
-    padding-right: 56px;
-    padding-top: 30px;
-    height: 100vh;
-  }
+.eachCartItem {
+  width: 580px;
+  height: 140px;
+  padding-top: 4rem;
+  margin-bottom: 5rem;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 2px 2px 45px -20px rgba(0, 0, 0, 0.4);
+} 
+
+.dishContainer {
+  border-radius: 20px;
+  background-color: #c4c4c4;
+  height: 70px;
+  width: 85px;
+  margin-left: 3rem;
 }
+
+.dishContainer img {
+  height: 100%;
+  margin-left: -1.7rem;
+}
+
+.idContainer {
+  margin-left: 2rem;
+}
+
+.idName {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.orderSize {
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  background-color: black;
+  color: #ffda7f;
+  height: 21px;
+  width: 70px;
+} 
+
+.price {
+  color: black;
+  font-size: 2.2rem;
+  font-weight: 800;
+  padding-bottom: 2.7rem;
+} 
+
+.counterContainer {
+    background-color: #171616;
+    border: none;
+    margin: 0 5rem 0 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    width: 19%;
+    height: 3.6rem;
+}
+
+.countContainer {
+  background-color: #ffda7f;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.count {
+    border: none;
+    font-size: 1.65rem;
+    font-weight: 600;
+    border-radius: 50%;
+
+}
+
+.btns {
+    background: none;
+    border: none;
+    color: #ffda7f;
+    font-size: 23px;
+    border-radius: 70%;
+}
+
+.removeOrder {
+  color: red;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: -2rem;
+  
+}
+
+.paymentContainer {
+  background: #171616;
+  text-align: center;
+  width: 330px;
+  height: 340px;
+  border-radius: 14px;
+  padding-top: 4.8rem;
+  /* position: fixed;
+  right: 0; */
+  /* margin-right: 8.5rem; */
+}
+
+.paymentContainer p {
+  color: #ffda7f;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-bottom: 3.2rem;
+}
+
+.totalText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  padding-bottom: 0.2rem;
+}
+
+.totalAmount {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 1rem;
+}
+
+.payBtn  {
+  border: none;
+  background: #ffda7f;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+  width: 200px;
+  height: 49px;
+  border-radius: 40px;
+}
+
+/* @media(max-width: 414px){
+    .cartBody {
+      margin: unset;
+    }
+
+    .paymentContainer {
+      display: none;
+    }
+
+    .eachCartItem {
+      flex-direction: column;
+      width: 150%;
+      align-items: center;
+      height: unset;
+    }
+} */

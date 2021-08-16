@@ -11,10 +11,6 @@
   position: relative;
 }
 
-.logo {
-  font-size: 3rem;
-  font-weight: 600;
-}
 .image-container .logo {
   position: absolute;
   margin: 0 auto;
@@ -88,16 +84,7 @@
   }
 
   .image-container {
-    display: block;
-  }
-
-  .image-container {
-    width: 100%;
-    height: 20vh;
-  }
-  
-  .img {
-    height: 100%;
+    display: none;
   }
 
   .logo {
@@ -107,8 +94,6 @@
 
   .form {
     width: 100%;
-    height: 50vh;
-    margin: 3.5em 0;
   }
 
   .form-control {

@@ -3,6 +3,11 @@
   position: relative;
   padding-left: 56px;
   padding-right: 56px;
+ 
+}
+
+.heroContent  .heroImage{
+  flex: 0.5;
 }
 .main{
     padding-left: 56px;
@@ -28,13 +33,21 @@
   line-height: 63px;
   letter-spacing: 0.02em;
   margin-right: auto;
+  color: #fff;
 }
+
 
 .navigation {
   width: 100%;
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
-  padding-top: 4rem;
+  padding: 1rem 2rem;
+  background: #000;
+  border: 1px solid #000;
+  z-index: 1;
+  
 }
 
 .landingNav {
@@ -59,8 +72,9 @@
 }
 
 .logo a {
-  color: #000;
+  color: #fff;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .cart {
@@ -87,43 +101,49 @@
 }
 
 .foodImg {
-  display: none;
+  display: flex;
+  width: 30rem;
 }
 
-.input {
+.inputAddress {
   border-radius: 50px;
   outline: none;
   border: 1px solid #000;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   width: 200px;
   color: #000;
   margin-top: 10px;
+  
 }
 .input::placeholder {
   color: #000;
+  font-size: 1rem;
 }
 
 .address {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 1rem;
   align-items: flex-start !important;
   width: 100%;
 }
 .heroContent {
-  margin-top: 20px;
-  height: 70vh;
+  justify-content: center;
+  height: 80vh;
   display: flex;
   align-items: center;
+  flex-direction: column-reverse;
+  
 }
 
 .heroContent .heroCaption{
-  font-size: 3.3rem;
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .heroContent div p{
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .left,
@@ -149,7 +169,7 @@
 }
 
 .menuToggle i {
-  background-color: #000;
+  background-color: #fff;
   width: 3.2rem;
   height: 0.4rem;
   margin: 0.4rem;
@@ -178,7 +198,7 @@
 
 #mobileNav {
   position: fixed;
-  width: 28rem;
+  width: 20rem;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2),
     0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
   background: #fff;
@@ -188,7 +208,7 @@
   left: 0;
   top: 0;
   display: flex;
-  z-index: 1;
+  z-index: 3;
   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -246,7 +266,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-
+  z-index: 1;
   opacity: 0.3;
   top: 0;
   left: 0;
@@ -298,7 +318,7 @@
 }
 .searchInput {
     border-radius: 50px;
-    width: 14rem;
+    width: 17rem;
    padding: 0.7rem 1rem;
     outline: none;
     border: 1px solid #000;
@@ -317,6 +337,10 @@
   justify-content: space-between;
   height: 15rem;
   align-items: center;
+}
+
+.allDishesHeader h3{
+  font-size: 3rem;
 }
 
 .filterContainer {
@@ -356,22 +380,71 @@ justify-content: center;
   grid-column: 1/3;
 }
 
+.pending{
+  background: #fff;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+.mostOrderedDish .modHeader h2{
+    font-size: 3rem;
+  }
 
 @media (max-width: 400px) {
   .heroSection, .main {
     padding-left: 25px;
     padding-right: 25px;
   }
+  
+}
+@media (min-width: 576px) {
+  .menuToggle i {
+    background-color: #fff;
+  }
+  .clients img{
+    width: 9.7rem;
+  }
+.foodImg {
+  display: none;
+}
+.heroCaption{
+  font-size: 5.6rem !important;
+}
+.heroContent{
+  align-items: flex-start;
+  justify-content: center;
+}
+.inputAddress {
+  width: 35rem;
+  padding: 2rem;
+}
+.heroContent div p{
+  
+  font-size: 2.4rem;
+}
+.mostOrderedDish .modHeader h2{
+    font-size: 2rem;
+  }
+  .allDishesHeader h3{
+    font-size: 2rem;
+  }
 }
 @media (min-width: 767px) {
+
+  .navigation{
+    padding: 1rem 5rem;
+  }
+ 
   .landingNav {
     display: flex;
   }
 
   .heroContent {
-    height: 70vh;
+    height: 80vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
   }
   .next {
     display: flex;
@@ -451,7 +524,9 @@ justify-content: center;
 .searchInput{
   margin-right: 2rem;
 }
-
+.heroCaption{
+  font-size: 5rem !important;
+}
 
 }
 
@@ -465,11 +540,11 @@ justify-content: center;
     position: relative;
     padding-left: 135px;
     padding-right: 60px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .heroContent {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
   }
@@ -479,18 +554,18 @@ justify-content: center;
   }
 
   .heroContent div:first-child {
-    width: 400px;
+    flex: 0.5;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
 
-  .heroContent div:not(first-child) {
+  .heroContent  .heroImage{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    
   }
 
   .input {
@@ -511,7 +586,7 @@ justify-content: center;
   }
 
   .address {
-    margin-top: 60px;
+    margin-top: 2rem;
   }
   .clients{
   display: grid;
@@ -521,7 +596,7 @@ justify-content: center;
 }
 
 .clients img{
-  max-width: 250px;
+  /* max-width: 250px; */
   justify-self: center;
   align-self: center;
   width: 20rem;
@@ -539,15 +614,29 @@ justify-content: center;
 .access{
   grid-column: 5;
 }
+.heroCaption{
+  font-size: 3.7rem ;
+}
 
 }
 
-@media (min-width: 576px) {
-  .menuToggle i {
-    background-color: #fff;
-  }
-  .clients img{
-    width: 9.7rem;
-  }
 
+@media (min-width: 1026px){
+  .heroImage{
+    align-items: center;
+  }
+  .foodImg{
+        margin-top: 30rem;
+    /* margin-left: 25rem; */
+    width: 40rem;
+  }
+  .heroCaption{
+  font-size: 5rem !important;
+}
+.heroImage{
+  justify-content: flex-start !important;
+}
+.heroContent div:first-child{
+  justify-content: flex-end;
+}
 }

@@ -1,17 +1,27 @@
-import TopBar from "./Components/Navbar/TopBar";
-import Footer from "./Components/Footer";
+import React from 'react'
 import styles from "./stylesheets/cart.module.css";
+import CartOrder from './CartOrder';
+import OrderPayment from './OrderPayment';
+
 const Cart = () => {
   return (
     <>
-      <div className={styles.hero}>
-        <TopBar />^ _ ^ this is the cart page.happy development.
+      <div className={styles.cartBody}>
+        <div className={styles.allCartContainer}>
+         
+
+          <CartOrder className={styles.eachCartItem} />
+          
+         
+        </div>
+
+        <div>
+          <OrderPayment />
+        </div>
+
       </div>
-      <Footer />
     </>
   );
 };
 
 export default Cart;
-
-//Don't forget to wrap the code inside the return statement in parentheses.
