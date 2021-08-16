@@ -626,11 +626,17 @@ justify-content: center;
     align-items: center;
   }
   .foodImg{
-        margin-top: 15rem;
+        margin-top: 30rem;
     /* margin-left: 25rem; */
     width: 40rem;
   }
   .heroCaption{
   font-size: 5rem !important;
+}
+.heroImage{
+  justify-content: flex-start !important;
+}
+.heroContent div:first-child{
+  justify-content: flex-end;
 }
 }
