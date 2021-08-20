@@ -31,7 +31,7 @@ export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => 
         .filter(filterByCategory)
         .map((dish) => (
           <div className={styles.dishContainer} key={dish._id}>
-            <Link to={`/dishes/${dish.id}`}className={styles.dishContainer}>
+            <Link to={`/dishes/${dish._id}`}className={styles.dishContainer}>
               <div className={styles.dishesImage}>
                 <img src={dish.image} />
               </div>
