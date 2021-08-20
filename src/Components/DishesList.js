@@ -5,8 +5,9 @@ import styles from "../stylesheets/dishesList.module.css";
 import useAxios from "../Hooks/useAxios";
 import baseUrl from "../utils/BaseUrl";
 
-export const AllDishesList = ({ category, dishes, searchTerm }) => {
-  console.log(dishes);
+
+// eslint-disable-next-line no-unused-vars
+export const AllDishesList = ({ category, setCategory, dishes, searchTerm }) => {
   const filterBySearch = (dish) => {
     if (searchTerm) {
       return dish.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -30,7 +31,7 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
         .filter(filterByCategory)
         .map((dish) => (
           <div className={styles.dishContainer} key={dish._id}>
-            <Link to={`/dishes/${dish._id}`} className={styles.dishContainer}>
+            <Link to={`/dishes/${dish.id}`}className={styles.dishContainer}>
               <div className={styles.dishesImage}>
                 <img src={dish.image} />
               </div>
@@ -44,7 +45,8 @@ export const AllDishesList = ({ category, dishes, searchTerm }) => {
               </div>
             </Link>
           </div>
-        ))}
+        ))
+      }
     </div>
   );
 };

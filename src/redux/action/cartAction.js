@@ -3,7 +3,7 @@ import axios from "axios";
 import baseUrl from "../../utils/BaseUrl";
 
 export const addToCart = (_id) => async (dispatch) => {
-  const { data } = await axios.get(`${baseUrl}/cart/${_id}`);
+  const { data } = await axios.post(`${baseUrl}/cart/${_id}`);
   console.log(data, "cart");
   dispatch({
     type: cartTypes.ADD_TO_CART,
