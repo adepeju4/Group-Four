@@ -235,6 +235,11 @@
   font-weight: 600;
 }
 
+.loginrdr {
+  color: #000;
+  font-size: 1.2rem;
+}
+
 .restaurant {
   position: absolute;
   top: 72%;

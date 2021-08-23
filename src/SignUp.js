@@ -1,14 +1,16 @@
 import style from "./stylesheets/signup.module.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { register } from './redux/action/signupAction.js'
-import { useDispatch } from 'react-redux'
+import { register } from './redux/action/signupAction';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 
 const SignUp = () => {
 
 
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const [values, setValues] = useState({
     name: "",
@@ -30,7 +32,7 @@ const SignUp = () => {
   };
 
   const handlePasswordInputChange = (event) => {
-    setValues({ ...values, password: event.target.value });
+      setValues({ ...values, password: event.target.value });
   };
 
   const handleConfirmPasswordInputChange = (event) => {
@@ -43,13 +45,15 @@ const SignUp = () => {
       values.name &&
       values.email &&
       values.password &&
-      values.confirmPassword
+      values.confirmPassword &&
+      values.confirmPassword === values.password &&
+      values.password.length > 6
     ) {
       SetValid(true);
     }
     setSubmitted(true);
 
-    dispatch(register(name, email, password, confirmPassword))
+    dispatch(register(name, email, password, confirmPassword, history))
   }
 
 
@@ -122,6 +126,9 @@ const SignUp = () => {
                   {submitted && !values.password ? (
                     <span>Please enter a password</span>
                   ) : null}
+                  {submitted && (values.password.length < 7) ? (
+                    <span> Password should not be less than 7 characters</span>
+                  ) : null}
                 </label>
                 <input
                   autoComplete="off"
@@ -133,6 +140,9 @@ const SignUp = () => {
                   placeholder="password"
                   className={style.inputPassword}
                 />
+                {submitted && (values.password) ? (
+                  <span> Password must be alphanumeric characters</span>
+                ) : null}
               </div>
               <div className={style.section3}>
                 <label className={style.confirmPassword}>
@@ -140,6 +150,9 @@ const SignUp = () => {
                   <br />{" "}
                   {submitted && !values.confirmPassword ? (
                     <span>Please confirm your password</span>
+                  ) : null}
+                  {submitted && values.confirmPassword !== values.password ? (
+                    <span> Password not a match</span>
                   ) : null}
                 </label>
                 <input
@@ -158,6 +171,7 @@ const SignUp = () => {
                   Sign Up
                 </button>
               </div>
+              <span className={style.loginrdr}>Already have an account? <Link to="/login">Login Here</Link></span>
             </form>
           </div>
         </div>
