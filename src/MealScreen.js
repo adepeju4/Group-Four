@@ -7,10 +7,12 @@ import { FaStar } from "react-icons/fa";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import ReviewForm from "./Components/ReviewForm";
 import ReviewsList from "./Components/ReviewsList";
+import { postCartItemsAsync } from "./redux/action/cartAction";
 import { useState } from "react";
-
+import { useParams } from "react-router";
+import { useDispatch } from "react-redux";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const MealScreen = ({ dish, reviews, dishId }) => {
   const history = useHistory();
@@ -24,6 +26,11 @@ const MealScreen = ({ dish, reviews, dishId }) => {
   const avgRating = Math.round(
     reviewsRating ? reviewsRating / reviews.length : 0
   );
+
+ 
+   const dispatch = useDispatch();
+   const { id } = useParams();
+ 
 
   const handleClick = () => {
     history.go(-1);
@@ -57,7 +64,12 @@ const MealScreen = ({ dish, reviews, dishId }) => {
             })}
           </div>
           <p>{description}</p>
-          <button className={styles.cta}>Add To Cart</button>
+          <button className={styles.cta} onClick={() => dispatch(postCartItemsAsync(id))}>
+            <Link to="/cart">
+
+            Add To Cart
+            </Link>
+          </button>
         </div>
         <div className={styles.productMedia}>
           <div className={styles.productImage}>
@@ -76,23 +88,17 @@ const MealScreen = ({ dish, reviews, dishId }) => {
             <h3>SHARE</h3>
             <div className={styles.socials}>
               <FacebookShareButton
-                url={`https://foodinemealapp.herokuapp.com/${_id}`}
-                quote={
-                  "Foodine lets you experience the amazing meal choices. We discover the hidden gems in the nearby to help you connect with various cultures and meal diversities" +
-                  "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
-                  "So, join us and get food delivered to you as soon as possible"
-                }
+                url={`https://foodinemealapp.herokuapp.com/dishes/${_id}`}
+                title={`Check out our ${name} meal on Foodine today`}
+                quote={`Check out our ${name} meal on Foodine today`}
                 hashtag="#Stutern"
               >
                 <img src="/assets/shareFacebook.png" />
               </FacebookShareButton>
               <TwitterShareButton
-                url={`https://foodinemealapp.herokuapp.com/${_id}`}
-                quote={
-                  "Foodine lets you experience the amazing meal choices. We discover the hidden gems in the nearby to help you connect with various cultures and meal diversities" +
-                  "Trust us, Our services are reliable and delivery is free for the first ten orders!" +
-                  "So, join us and get food delivered to you as soon as possible"
-                }
+                url={`https://foodinemealapp.herokuapp.com/dishes/${_id}`}
+                title={`Check out our ${name} meal on Foodine today`}
+                quote={`Check out our ${name} meal on Foodine today`}
                 hashtag="#Stutern"
               >
                 <img src="/assets/shareTwitter.png" />

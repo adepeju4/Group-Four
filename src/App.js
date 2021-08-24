@@ -8,12 +8,17 @@ import HelmetMetaData from "./Components/HelmetMetaData";
 
 import NavBar from "./Components/Navbar/NavBar.js";
 
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CustomSwitch from "./Components/CustomSwitch.js";
 import Footer from "./Components/Footer.js";
 import ScrollToTop from "./Components/ScrollToTop.js";
+import ProtectedRoute from "./Components/ProtectedRoutes.js";
 
 function App() {
+  
+  
+   
   return (
     <div className="App">
       <BrowserRouter>
@@ -42,14 +47,16 @@ function App() {
               <Route path="/about">
                 <About />
               </Route>
-              <Route path="/cart">
-                <Cart />
-              </Route>
+
+              <ProtectedRoute
+                path="/cart"
+                component={Cart}
+              />
             </Switch>
           </CustomSwitch>
         </div>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
