@@ -126,13 +126,10 @@ const SignUp = () => {
                   <br />{" "}
                   {submitted && !values.password ? (
                     <span>Please enter a password</span>
-                  ) : null}
-                  {submitted && (values.password.length < 7) ? (
-                    <span> Password should not be less than 7 characters</span>
-                  ) : null}
-                  {submitted && (!values.password.match(/^[0-9A-Za-z]+$/)) ? (
-                  <span className={style.alpha}> Password must be alpha numeric characters</span>
-                ) : null}
+                  ) : submitted && (values.password.length < 7) ? 
+                  <span> Password should not be less than 7 characters</span>
+                   : submitted && (!values.password.match(/^[0-9A-Za-z]+$/)) ? 
+                   <span className={style.alpha}> Password must be alpha numeric characters</span> : null}
                 </label>
                 <input
                   autoComplete="off"
@@ -151,10 +148,9 @@ const SignUp = () => {
                   <br />{" "}
                   {submitted && !values.confirmPassword ? (
                     <span>Please confirm your password</span>
-                  ) : null}
-                  {submitted && values.confirmPassword !== values.password ? (
-                    <span> Password not a match</span>
-                  ) : null}
+                  ) : submitted && values.confirmPassword !== values.password ?
+                   <span> Password not a match</span> : submitted && (!values.password.match(/^[0-9A-Za-z]+$/)) ? 
+                   <span className={style.alpha}> Password must be alpha numeric characters</span> : null}
                 </label>
                 <input
                   autoComplete="off"
