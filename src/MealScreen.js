@@ -11,11 +11,10 @@ import { postCartItemsAsync } from "./redux/action/cartAction";
 import { useState } from "react";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MealScreen = ({ dish, reviews, dishId }) => {
-  const history = useHistory();
+ 
 
   const [active, setActive] = useState(false);
   const { name, _id, price, description, image, label } = dish;
@@ -32,16 +31,10 @@ const MealScreen = ({ dish, reviews, dishId }) => {
    const { id } = useParams();
  
 
-  const handleClick = () => {
-    history.go(-1);
-  };
+  
   return (
     <>
-      <Breadcrumb className={styles.breadcrumb}>
-        <Breadcrumb.Item onClick={handleClick}>Back</Breadcrumb.Item>
 
-        <Breadcrumb.Item active>Meal Page</Breadcrumb.Item>
-      </Breadcrumb>
       <section className={styles.productPreview}>
         <div className={styles.productInfo}>
           <h1>{name}</h1>

@@ -6,7 +6,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .productInfo{
