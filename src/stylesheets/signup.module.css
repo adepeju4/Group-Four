@@ -105,7 +105,7 @@
 }
 
 .success{
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .name {
@@ -176,8 +176,15 @@
   border: 0.5px black solid;
 }
 
+.details > .section2 > .alpha{
+  text-align: left;
+}
+.alpha {
+  color: red;
+}
+
 .section0 {
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .section0 > .name > span{
@@ -560,7 +567,7 @@
     font-size: 1.2rem;
   }
   .details {
-    margin: 35% auto;
+    margin: 42% auto;
     width: 70%;
   }
 
@@ -584,7 +591,7 @@
     font-size: 1.813rem;
   }
   .section0{
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
   }
   .section1{
     margin: 1.5rem 0;
@@ -716,7 +723,7 @@
   }
   
   .section0 {
-    margin: 1.25rem 0;
+    margin-bottom: 1.25rem;
   }
 
   .section1 {
@@ -836,7 +843,7 @@
   }
   
   .section0 {
-    margin: 1.25rem 0;
+    margin-bottom: 1.25rem;
   }
 
   .section1 {

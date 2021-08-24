@@ -32,8 +32,14 @@ const SignUp = () => {
   };
 
   const handlePasswordInputChange = (event) => {
-      setValues({ ...values, password: event.target.value });
-  };
+    // const regex = /^[A-Za-z0-9\s]+$/;
+    setValues({ ...values, password: event.target.value });
+    // if (!password.match(regex)){
+    //   document.getElementsByClassName(style.alpha).innerHTML = "Please enter alpha numeric values only"
+    // } 
+    // SetValid(true);
+    }
+
 
   const handleConfirmPasswordInputChange = (event) => {
     setValues({ ...values, confirmPassword: event.target.value });
@@ -47,7 +53,8 @@ const SignUp = () => {
       values.password &&
       values.confirmPassword &&
       values.confirmPassword === values.password &&
-      values.password.length > 6
+      values.password.length > 6 &&
+      values.password.match(/^[0-9A-Za-z]+$/)
     ) {
       SetValid(true);
     }
@@ -129,6 +136,10 @@ const SignUp = () => {
                   {submitted && (values.password.length < 7) ? (
                     <span> Password should not be less than 7 characters</span>
                   ) : null}
+                  {submitted && (!values.password.match(/^[0-9A-Za-z]+$/)) ? (
+                      // /^[A-Za-z0-9\s]+$/    /^[A-Za-z0-9]*$/i    ^\s*([0-9a-zA-Z]*)\s*$
+                  <span className={style.alpha}> Password must be alpha numeric characters</span>
+                ) : null}
                 </label>
                 <input
                   autoComplete="off"
@@ -140,9 +151,6 @@ const SignUp = () => {
                   placeholder="password"
                   className={style.inputPassword}
                 />
-                {submitted && (values.password) ? (
-                  <span> Password must be alphanumeric characters</span>
-                ) : null}
               </div>
               <div className={style.section3}>
                 <label className={style.confirmPassword}>
