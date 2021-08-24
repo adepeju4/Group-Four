@@ -10,7 +10,7 @@ const useAxios = (url, params) => {
     return await axios
       .get(url, params)
       .then((res) => {
-        setData(res?.data.data);
+        setData(res.data.data);
         setIsPending(false);
       })
       .catch((err) => {

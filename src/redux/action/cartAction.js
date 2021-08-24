@@ -1,32 +1,70 @@
 import { cartTypes } from "../type/cartTypes";
 import axios from "axios";
 import baseUrl from "../../utils/BaseUrl";
+// import baseUrl from "../../utils/BaseUrl";
 
-export const addToCart = (_id) => async (dispatch) => {
-  const { data } = await axios.get(`${baseUrl}/cart/${_id}`);
-  console.log(data, "cart");
-  dispatch({
+const getCartItems = (data) => {
+  return {
     type: cartTypes.ADD_TO_CART,
-    payload: {
-      id: data._id,
-      name: data.name,
-      image: data.image,
-      price: data.price,
-    },
-  });
-};
+    data: data,
+    pending: false
+  };
+}
 
-export const removeFromCart = (_id) => async (dispatch) => {
-  const { data } = await axios.get(`${baseUrl}/cart/${_id}`);
-  dispatch({
-    type: cartTypes.REMOVE_FROM_CART,
-    id: data._id,
-    name: data.name,
-    image: data.image,
-    price: data.price,
-  });
-};
 
-export const emptyCart = () => {
-  console.log("There is nothing in your cart");
-};
+const deleteCartItem = () => {
+  return {
+    type: cartTypes.REMOVE_FROM_CART
+
+  };
+}
+
+
+export const postCartItemsAsync = (id) => async() => {
+  try {
+    const userToken = localStorage.getItem("userToken");
+    const objectToken = JSON.parse(userToken);
+    const { token } = objectToken;
+   
+    console.log(token);
+    let res = await axios.post(`https://${baseUrl}/cart/${id}`, { id }, {
+      headers: {
+        'Authorization': `${token}`,
+      }   
+  });
+    console.log(res, "cart for post o")
+  } catch (err) {
+    console.log(err);
+  }
+}
+export const getCartItemsAsync = (userId) => async(dispatch) => {
+  try {
+    
+    let res = await axios.get(`https://${baseUrl}/cart/${userId}`);
+    dispatch(getCartItems(res.data))
+    console.log(res.data , "cart responseeeee")
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const deleteCartItemAsync = (dishId) => async (dispatch) => {
+  const userToken = localStorage.getItem("userToken");
+    const objectToken = JSON.parse(userToken);
+    const { token } = objectToken;
+  try {
+    let res = await axios.delete(
+      `http://localhost:7000/cart/${dishId}`,
+      { dishId },
+      {
+        headers: {
+          Authorization: `${token}`,
+        },
+      }
+    );
+    dispatch(deleteCartItem(res.data));
+    console.log(res, "delete response")
+  } catch (err) {
+    console.log(err);
+  }
+}

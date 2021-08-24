@@ -10,14 +10,13 @@ const Cart = () => {
         <div className={styles.allCartContainer}>
          
 
-          <CartOrder className={styles.eachCartItem} />
+          <CartOrder />
           
+          <OrderPayment />
          
         </div>
 
-        <div>
-          <OrderPayment />
-        </div>
+        
 
       </div>
     </>

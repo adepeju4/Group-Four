@@ -7,12 +7,14 @@ const getProducts = (data) => {
   return {
     type: productsTypes.SET_PRODUCTS,
     data: data,
+    pending: true
   };
 };
 const getProduct = (data) => {
   return {
     type: productTypes.SET_PRODUCT,
     data: data,
+    pending: true
   };
 };
 

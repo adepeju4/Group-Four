@@ -1,4 +1,5 @@
 import MealScreen from "./MealScreen";
+import HelmetMetaData from "./Components/HelmetMetaData.js";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductAsync } from "./redux/action/productsAction";
 import { useEffect } from "react";
@@ -22,6 +23,7 @@ const Product = () => {
 
   return (
     <>
+      <HelmetMetaData></HelmetMetaData>
       <div className={styles.productBody}>
         {isPending && (
           <>
