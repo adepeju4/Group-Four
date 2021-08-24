@@ -111,9 +111,6 @@
   height: 340px;
   border-radius: 14px;
   padding-top: 4.8rem;
-  /* position: fixed;
-  right: 0; */
-  /* margin-right: 8.5rem; */
 }
 
 .paymentContainer p {
@@ -137,12 +134,13 @@
   font-size: 2.5rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  padding-bottom: 1rem;
+  padding-bottom: 2.5rem;
 }
 
-.payBtn  {
+.modal {
   border: none;
   background: #ffda7f;
+  outline: none;
   font-size: 18px;
   font-weight: 800;
   color: black;
@@ -151,19 +149,27 @@
   border-radius: 40px;
 }
 
-/* @media(max-width: 414px){
-    .cartBody {
-      margin: unset;
-    }
+.modal_pop {
+  margin: 20em 40em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 500px;
+  height: 150px;
+}
 
-    .paymentContainer {
-      display: none;
-    }
+.modal_pop_text {
+  margin: 3em auto;
+}
 
-    .eachCartItem {
-      flex-direction: column;
-      width: 150%;
-      align-items: center;
-      height: unset;
-    }
-} */
+.okBtn {
+  padding: 7px 15px;
+  margin-top: 12px;
+  background-color: #171616;
+  border: none;
+  color: #ffda7f;
+  font-weight: 600;
+  font-size: 12px;
+}

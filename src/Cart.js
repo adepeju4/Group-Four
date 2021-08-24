@@ -8,11 +8,9 @@ const Cart = () => {
     <>
       <div className={styles.cartBody}>
         <div className={styles.allCartContainer}>
-         
-
-          <CartOrder className={styles.eachCartItem} />
-          
-         
+          <CartOrder className={styles.eachCartItem} />       
+          <CartOrder className={styles.eachCartItem} />       
+          <CartOrder className={styles.eachCartItem} />              
         </div>
 
         <div>
